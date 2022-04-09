@@ -55,6 +55,6 @@ DEB_BUILD_OPTIONS="nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
 cd ..
 rm -vf *-dbg*.deb
 
-for x in bareos-*; do
+for x in bareos*.deb; do
     mv -v $x bareos-${DEB_FLAVOR}-${x:7}
 done
