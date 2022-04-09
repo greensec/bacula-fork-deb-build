@@ -22,7 +22,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: ${{ secrets.DOCKERHUB_USERNAME }}/bareos-custom-build:${{ github.event.inputs.flavor }}
+      image: "${{ secrets.DOCKERHUB_USERNAME }}/bareos-custom-build:${{ github.event.inputs.flavor }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
