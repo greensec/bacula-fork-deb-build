@@ -1,8 +1,12 @@
-# This is a basic workflow that is manually triggered
-
-name: build on new tag
+name: build full release
 on:
   workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      version_tag:
+        description: 'Version Tag'
+        default: '21.1.2'
+        required: true
   create:
     tags:
       - '*'
