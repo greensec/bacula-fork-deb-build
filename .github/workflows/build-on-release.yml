@@ -1,0 +1,108 @@
+# This is a basic workflow that is manually triggered
+
+name: build on new tag
+on:
+  workflow_dispatch:
+  create:
+    tags:
+      - '*'
+jobs:
+  build:
+    name: Build stretch
+    runs-on: ubuntu-latest
+    container:
+      image: "greensec/bacula-fork-custom-build:stretch"
+      options: --privileged --device /dev/fuse
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set env
+        run: echo "VERSION_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Cache build
+        uses: actions/cache@v3
+        with:
+          path: |
+            cache
+          key: "stretch-build-cache-${{ env.VERSION_TAG }}"
+          restore-keys: |
+            "stretch-build-cache-"
+      - name: Run build script
+        run: ./scripts/build.sh
+        env:
+          DEB_FLAVOR: "stretch"
+      - name: Upload deb files
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: ./*.deb
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./*.deb
+  build:
+    name: Build buster
+    runs-on: ubuntu-latest
+    container:
+      image: "greensec/bacula-fork-custom-build:buster"
+      options: --privileged --device /dev/fuse
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set env
+        run: echo "VERSION_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Cache build
+        uses: actions/cache@v3
+        with:
+          path: |
+            cache
+          key: "buster-build-cache-${{ env.VERSION_TAG }}"
+          restore-keys: |
+            "buster-build-cache-"
+      - name: Run build script
+        run: ./scripts/build.sh
+        env:
+          DEB_FLAVOR: "buster"
+      - name: Upload deb files
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: ./*.deb
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./*.deb
+  build:
+    name: Build bullseye
+    runs-on: ubuntu-latest
+    container:
+      image: "greensec/bacula-fork-custom-build:bullseye"
+      options: --privileged --device /dev/fuse
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set env
+        run: echo "VERSION_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Cache build
+        uses: actions/cache@v3
+        with:
+          path: |
+            cache
+          key: "bullseye-build-cache-${{ env.VERSION_TAG }}"
+          restore-keys: |
+            "bullseye-build-cache-"
+      - name: Run build script
+        run: ./scripts/build.sh
+        env:
+          DEB_FLAVOR: "bullseye"
+      - name: Upload deb files
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: ./*.deb
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./*.deb
