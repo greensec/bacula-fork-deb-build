@@ -22,7 +22,7 @@ RUN set -e \
     && echo "deb-src http://download.bareos.org/bareos/experimental/nightly/Debian_11 /" >> /etc/apt/sources.list.d/bareos.list \
     && wget -O- "https://download.bareos.org/bareos/experimental/nightly/Debian_11/Release.key" | apt-key add - \
     && apt-get update \
-    && apt-get install git git-buildpackage cmake ccache -y \
-    && apt-get build-dep bareos -y \
+    && apt-get install -y git git-buildpackage cmake \
+    && apt-get build-dep -y bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
