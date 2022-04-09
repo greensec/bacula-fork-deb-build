@@ -2,8 +2,8 @@
 set -e
 set -x
 
-if [[ -z "${BAREOS_TAG}" ]]; then
-    echo "Parameter BAREOS_TAG missing!"
+if [[ -z "${VERSION_TAG}" ]]; then
+    echo "Parameter VERSION_TAG missing!"
 fi
 
 if [[ -z "${DEB_FLAVOR}" ]]; then
@@ -37,14 +37,14 @@ else
 fi
 
 cd bareos
-echo "Checkout from tag: ${BAREOS_TAG}"
-git checkout "${BAREOS_TAG}"
+echo "Checkout from tag: ${VERSION_TAG}"
+git checkout "${VERSION_TAG}"
 COMMIT_HASH=$(git log -n 1 --pretty=format:'%h' --abbrev=8)
 
 # create original source tar file - just for dpkg-buildpackage compatibility
-git archive master | bzip2 > ../bareos_${BAREOS_TAG}.orig.tar.bz2
+git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
 (
-  echo "bareos (${BAREOS_TAG}-${COMMIT_HASH}) unstable; urgency=high"
+  echo "bareos (${VERSION_TAG}-${COMMIT_HASH}) unstable; urgency=high"
   echo ""
   echo "  * upstream release"
   echo ""

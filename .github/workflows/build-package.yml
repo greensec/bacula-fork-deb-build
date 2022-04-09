@@ -13,8 +13,8 @@ on:
           - 'buster'
           - 'stretch'
         required: true
-      bareos_tag:
-        description: 'Bareos Version Tag'
+      version_tag:
+        description: 'Version Tag'
         default: '21.1.2'
         required: true
 jobs:
@@ -22,7 +22,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: "${{ secrets.DOCKERHUB_USERNAME }}/bareos-custom-build:${{ github.event.inputs.flavor }}"
+      image: "greensec/bacula-fork-custom-build:${{ github.event.inputs.flavor }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
@@ -32,14 +32,14 @@ jobs:
         with:
           path: |
             cache
-          key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.bareos_tag }}"
+          key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.version_tag }}"
           restore-keys: |
             "${{ github.event.inputs.flavor }}-build-cache-"
       - name: Run build script
         run: ./scripts/build.sh
         env:
           DEB_FLAVOR: "${{ github.event.inputs.flavor }}"
-          BAREOS_TAG: "${{ github.event.inputs.bareos_tag }}"
+          VERSION_TAG: "${{ github.event.inputs.version_tag }}"
       - name: Upload deb files
         uses: actions/upload-artifact@v3
         with:

@@ -32,4 +32,4 @@ jobs:
           context: "{{defaultContext}}:docker"
           file: "build-${{ github.event.inputs.flavor }}"
           push: true
-          tags: "${{ secrets.DOCKERHUB_USERNAME }}/bareos-custom-build:${{ github.event.inputs.flavor }}"
+          tags: "${{ secrets.DOCKERHUB_USERNAME }}/bacula-fork-custom-build:${{ github.event.inputs.flavor }}"
