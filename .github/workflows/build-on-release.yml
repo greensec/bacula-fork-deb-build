@@ -7,7 +7,7 @@ on:
     tags:
       - '*'
 jobs:
-  build:
+  build_stretch:
     name: Build stretch
     runs-on: ubuntu-latest
     container:
@@ -40,7 +40,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-  build:
+  build_buster:
     name: Build buster
     runs-on: ubuntu-latest
     container:
@@ -73,7 +73,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-  build:
+  build_bullseye:
     name: Build bullseye
     runs-on: ubuntu-latest
     container:
