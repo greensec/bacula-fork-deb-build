@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -x
 
 if [[ -z "${VERSION_TAG}" ]]; then
     echo "Parameter VERSION_TAG missing!"

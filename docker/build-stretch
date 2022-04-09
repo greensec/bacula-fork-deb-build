@@ -18,13 +18,15 @@ RUN	set -e \
 RUN set -e \
     && echo "deb-src http://deb.debian.org/debian stretch main" >/etc/apt/sources.list.d/stretch-source.list \
     && echo "deb http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports.list \
+    && echo "deb http://http.debian.net/debian stretch-backports-sloppy main" >>/etc/apt/sources.list.d/stretch-backports.list \
     && echo "deb-src http://security.debian.org/debian-security stretch/updates main" >>/etc/apt/sources.list.d/stretch-source.list \
     && echo "deb http://download.bareos.org/bareos/release/21/Debian_9.0 /" > /etc/apt/sources.list.d/bareos.list \
     && echo "deb-src http://download.bareos.org/bareos/release/21/Debian_9.0 /" >> /etc/apt/sources.list.d/bareos.list \
     && wget -O- https://download.bareos.org/bareos/release/21/Debian_9.0/Release.key | apt-key add - \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
-    && apt-get install -y -t stretch-backports cmake libarchive13 \
+    && apt-get install -y -t stretch-backports-sloppy libarchive13 \
+    && apt-get install -y -t stretch-backports cmake \
     && apt-get build-dep -y bareos \
     && apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
