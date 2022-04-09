@@ -24,8 +24,7 @@ RUN set -e \
     && wget -O- https://download.bareos.org/bareos/release/21/Debian_10/Release.key | apt-key add - \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
-    && apt-get install -y -t buster-backports libarchive13 \
-    && apt-get install -y -t buster-backports cmake \
+    && apt-get install -y -t buster-backports cmake libarchive13 \
     && apt-get build-dep -y bareos \
     && apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
