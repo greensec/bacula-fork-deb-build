@@ -1,2 +1,2 @@
-# bareos-deb-build
-Custom build of bareos packages
+# bacula-fork-deb-build
+Custom debian build of the unnamed bacula fork
