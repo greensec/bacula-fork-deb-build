@@ -38,7 +38,7 @@ fi
 
 cd bareos
 echo "Checkout from tag: ${VERSION_TAG}"
-git checkout "${VERSION_TAG}"
+git checkout "Release/${VERSION_TAG}"
 COMMIT_HASH=$(git log -n 1 --pretty=format:'%h' --abbrev=8)
 
 # create original source tar file - just for dpkg-buildpackage compatibility
