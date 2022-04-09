@@ -55,4 +55,7 @@ git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
 DEB_BUILD_OPTIONS="nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
 cd ..
 rm -vf *-dbg*.deb
-ls *.deb
+
+for x in bareos-*; do
+    mv -v $x bareos-${DEB_FLAVOR}-${x:7}
+done
