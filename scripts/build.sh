@@ -43,7 +43,7 @@ COMMIT_HASH=$(git log -n 1 --pretty=format:'%h' --abbrev=8)
 # create original source tar file - just for dpkg-buildpackage compatibility
 git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
 (
-  echo "bareos (${VERSION_TAG}-${COMMIT_HASH}) unstable; urgency=high"
+  echo "bareos (${VERSION_TAG}-${DEB_FLAVOR}) unstable; urgency=high"
   echo ""
   echo "  * upstream release"
   echo ""
@@ -54,7 +54,3 @@ git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
 DEB_BUILD_OPTIONS="nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
 cd ..
 rm -vf *-dbg*.deb
-
-for x in bareos*.deb; do
-    mv -v $x bareos-${DEB_FLAVOR}-${x:7}
-done
