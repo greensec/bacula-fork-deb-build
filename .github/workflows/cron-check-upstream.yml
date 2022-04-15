@@ -13,7 +13,7 @@ jobs:
         token: ${{ secrets.GH_PAT }}
     - name: compare version
       id: check
-      run: ./scripts/check_latest_version.sh "bareos/bareos" "$GITHUB_REPOSITORY"
+      run: ./scripts/check_latest_version.sh "bareos/bareos"
     - name: Commit report
       if: "steps.check.outputs.vercomp == 'newer'"
       run: |
