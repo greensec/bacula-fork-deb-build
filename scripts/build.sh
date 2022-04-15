@@ -51,6 +51,6 @@ git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
   echo ""
 ) > debian/changelog
 
-DEB_BUILD_OPTIONS="nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
+DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
 cd ..
 rm -vf *-dbg*.deb
