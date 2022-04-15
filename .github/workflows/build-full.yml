@@ -43,26 +43,6 @@ jobs:
         with:
           name: packages
           path: ./*.deb
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: ./*.deb
-      - name: Github pages APT repo
-        uses: smeinecke/apt-repo-action@v2.1.0
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
-          repo_supported_version: |
-            stretch
-            buster
-            bullseye
-          file: |
-            *.deb
-          file_target_version: stretch
-          public_key: ${{ secrets.APT_PUBLIC_KEY }}
-          private_key: ${{ secrets.APT_SIGNING_KEY }}
-          key_passphrase: ""
   build_buster:
     name: Build buster
     runs-on: ubuntu-latest
@@ -95,26 +75,6 @@ jobs:
         with:
           name: packages
           path: ./*.deb
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: ./*.deb
-      - name: Github pages APT repo
-        uses: smeinecke/apt-repo-action@v2.1.0
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
-          repo_supported_version: |
-            stretch
-            buster
-            bullseye
-          file: |
-            *.deb
-          file_target_version: buster
-          public_key: ${{ secrets.APT_PUBLIC_KEY }}
-          private_key: ${{ secrets.APT_SIGNING_KEY }}
-          key_passphrase: ""
   build_bullseye:
     name: Build bullseye
     runs-on: ubuntu-latest
@@ -147,13 +107,23 @@ jobs:
         with:
           name: packages
           path: ./*.deb
+  add_release:
+    name: Add package to release
+    needs: [build_stretch, build_buster, build_bullseye]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: packages
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-      - name: Github pages APT repo
-        uses: smeinecke/apt-repo-action@v2.1.0
+      - name: Add stretch release
+        uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GH_PAT }}
           repo_supported_arch: amd64
@@ -162,8 +132,35 @@ jobs:
             buster
             bullseye
           file: |
-            *.deb
+            *-stretch_*.deb
+          file_target_version: stretch
+          private_key: ${{ secrets.APT_SIGNING_KEY }}
+          key_passphrase: ""
+      - name: Add buster release
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          repo_supported_arch: amd64
+          repo_supported_version: |
+            stretch
+            buster
+            bullseye
+          file: |
+            *-buster_*.deb
+          file_target_version: buster
+          private_key: ${{ secrets.APT_SIGNING_KEY }}
+          key_passphrase: ""
+      - name: Add bullseye release
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          repo_supported_arch: amd64
+          repo_supported_version: |
+            stretch
+            buster
+            bullseye
+          file: |
+            *-bullseye_*.deb
           file_target_version: bullseye
-          public_key: ${{ secrets.APT_PUBLIC_KEY }}
           private_key: ${{ secrets.APT_SIGNING_KEY }}
           key_passphrase: ""
