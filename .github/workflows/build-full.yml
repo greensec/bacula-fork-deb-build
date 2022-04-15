@@ -11,11 +11,15 @@ on:
     tags:
       - '*'
 jobs:
-  build_stretch:
-    name: Build stretch
+  build:
+    name: Build packages
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os-version: ["stretch", "buster", "bullseye"]
     container:
-      image: "greensec/bacula-fork-custom-build:stretch"
+      image: "greensec/bacula-fork-custom-build:${{ matrix.os-version }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
@@ -31,77 +35,13 @@ jobs:
         with:
           path: |
             cache
-          key: "stretch-build-cache-${{ env.VERSION_TAG }}"
+          key: "${{ matrix.os-version }}-build-cache-${{ env.VERSION_TAG }}"
           restore-keys: |
-            "stretch-build-cache-"
+            "${{ matrix.os-version }}-build-cache-"
       - name: Run build script
         run: ./scripts/build.sh
         env:
-          DEB_FLAVOR: "stretch"
-      - name: Upload deb files
-        uses: actions/upload-artifact@v3
-        with:
-          name: packages
-          path: ./*.deb
-  build_buster:
-    name: Build buster
-    runs-on: ubuntu-latest
-    container:
-      image: "greensec/bacula-fork-custom-build:buster"
-      options: --privileged --device /dev/fuse
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Set env
-        if: startsWith(github.ref, 'refs/tags/')
-        run: echo "VERSION_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Set env
-        if: github.event.inputs.version_tag != ''
-        run: echo "VERSION_TAG=${{ github.event.inputs.version_tag }}" >> $GITHUB_ENV
-      - name: Cache build
-        uses: actions/cache@v3
-        with:
-          path: |
-            cache
-          key: "buster-build-cache-${{ env.VERSION_TAG }}"
-          restore-keys: |
-            "buster-build-cache-"
-      - name: Run build script
-        run: ./scripts/build.sh
-        env:
-          DEB_FLAVOR: "buster"
-      - name: Upload deb files
-        uses: actions/upload-artifact@v3
-        with:
-          name: packages
-          path: ./*.deb
-  build_bullseye:
-    name: Build bullseye
-    runs-on: ubuntu-latest
-    container:
-      image: "greensec/bacula-fork-custom-build:bullseye"
-      options: --privileged --device /dev/fuse
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Set env
-        if: startsWith(github.ref, 'refs/tags/')
-        run: echo "VERSION_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Set env
-        if: github.event.inputs.version_tag != ''
-        run: echo "VERSION_TAG=${{ github.event.inputs.version_tag }}" >> $GITHUB_ENV
-      - name: Cache build
-        uses: actions/cache@v3
-        with:
-          path: |
-            cache
-          key: "bullseye-build-cache-${{ env.VERSION_TAG }}"
-          restore-keys: |
-            "bullseye-build-cache-"
-      - name: Run build script
-        run: ./scripts/build.sh
-        env:
-          DEB_FLAVOR: "bullseye"
+          DEB_FLAVOR: "${{ matrix.os-version }}"
       - name: Upload deb files
         uses: actions/upload-artifact@v3
         with:
@@ -109,7 +49,7 @@ jobs:
           path: ./*.deb
   add_release:
     name: Add package to release
-    needs: [build_stretch, build_buster, build_bullseye]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
