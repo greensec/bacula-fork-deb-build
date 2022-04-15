@@ -8,12 +8,11 @@ jobs:
   check_upstream:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         token: ${{ secrets.GH_PAT }}
-    - id: check
-      run: ./scripts/check_latest_version.sh 'bareos/bareos' "$GITHUB_REPOSITORY"
-      shell: bash
+    - id: compare version
+      run: ./scripts/check_latest_version.sh "bareos/bareos" "$GITHUB_REPOSITORY"
     - name: Commit report
       if: "steps.check.outputs.vercomp == 'newer'"
       run: |

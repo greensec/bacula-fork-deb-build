@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 vercomp () {
     if [[ $1 == $2 ]]
