@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Codename: stretch
+Date: Fri, 15 Apr 2022 18:02:59 UTC
+Architectures: amd64
+Components: main
+Description: greensec/bacula-fork-deb-build
+MD5Sum:
+ 4aec29231241bb910f61fe3af247551c 29334 main/binary-amd64/Packages
+ 5f79fcdac301e9c77125f519bf0d3d55 5859 main/binary-amd64/Packages.gz
+ c8a7ecec259dd151e51787e177ff1422 80 main/binary-amd64/Release
+SHA1:
+ 9d30885f8ac442413f4fe387ca73276b5d957b4c 29334 main/binary-amd64/Packages
+ f92f40bce248970f68b64acffdc9f473ad85682e 5859 main/binary-amd64/Packages.gz
+ 6ecbe32ac4e26453096e4d1b31561813d8ef7052 80 main/binary-amd64/Release
+SHA256:
+ 01571f80ca4603ebd875530436f15f4d73f0c5e08d66ab98f2df445d4a38b9da 29334 main/binary-amd64/Packages
+ 996132353b66480c891635fda329872ca74784b93cee2d668b1cb20e22078f75 5859 main/binary-amd64/Packages.gz
+ 084ef64666deb6f4717d923bb0fb38510ac8b1d20eb1446fe10b003809be8b75 80 main/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE2ULbBj4dMU0J5fOKN2B/7oh8UgYFAmJZs1MACgkQN2B/7oh8
+UgaHtA//V/ljD9587y6FZDdXJ8+S+wGUcjrosM7eX8rlymp9AVOUQRFxKnc9VELe
+A6CreXDVHet+01L1+Qrny9Y29HuH82nn6kdB3aK35WQgNtzlboatCrlpTZQSdHUF
+8RlOMGYaZh0R+WGSMRxUi/Rj1qsJk7kpBvuO8h6dq57FbQYsTXTVnXi6B5n4Xhtj
+zaHyXazKrVzBGprokZMkU3+Jk7rTuPpJhIAXXA6wgBkdTJo+LfK/aREGN2uiqrU2
+ycrxFEXyUGE334AA/lvGsOTCtXQ5oGmfMvLqJ2UjrBGRbYSe58ueITP2HJy0QXy2
+PJL1idDcdYx39YcAH35UzKCPl95A5SDOKSGFcosMM6WhZWMvW0yIa0ezOlxluCCq
+DmRYR81+GyQUTZ9DSbjI6tqvFBQ43yhDC7cREMCCdqOuM3/REP7bf1VSPIHF7ZcE
+rJXA2nXSf4CicmWaCDmCmmIt++MAfO5x3sf75uc/o+0ox0nOG9AQYU0MDpWBFq94
+mFji7jA2pRC1YsLhm7JSW7kybPzLbAsrq16G1aoKNdar1VtX7GsiUPcYoyPf3vBQ
+bcoYHOuTvCBSejDGBRpT2bfwGpcDssnfxe1VT3KbdWRnFzpKDt0FWTccKfKGwH3y
+/of4wyO6kMTUSTeebx0VjKj/p/sByUz84NQPm9Uz1auA8PPbuRk=
+=24K+
+-----END PGP SIGNATURE-----

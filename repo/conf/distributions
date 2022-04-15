@@ -1,0 +1,21 @@
+Description: greensec/bacula-fork-deb-build
+Codename: stretch
+Architectures: amd64
+Components: main
+SignWith: D942DB063E1D314D09E5F38A37607FEE887C5206
+
+
+Description: greensec/bacula-fork-deb-build
+Codename: buster
+Architectures: amd64
+Components: main
+SignWith: D942DB063E1D314D09E5F38A37607FEE887C5206
+
+
+Description: greensec/bacula-fork-deb-build
+Codename: bullseye
+Architectures: amd64
+Components: main
+SignWith: D942DB063E1D314D09E5F38A37607FEE887C5206
+
+
