@@ -1,17 +1,17 @@
 Package: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 97
-Depends: bareos-director (= 21.1.3-stretch), bareos-storage (= 21.1.3-stretch), bareos-client (= 21.1.3-stretch)
+Installed-Size: 98
+Depends: bareos-director (= 21.1.4-stretch), bareos-storage (= 21.1.4-stretch), bareos-client (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos_21.1.3-stretch_amd64.deb
-Size: 29586
-SHA256: 2f316d548585438cb430d1c98ca7ee74a7f52d15c62671d90210f5f2b4937ee5
-SHA1: 5ce1e04c8a0834dce12aad6c9d605c1e61acc417
-MD5sum: 8e91556b940ca0a455d5bab4549706d7
+Filename: pool/main/b/bareos/bareos_21.1.4-stretch_amd64.deb
+Size: 29902
+SHA256: 32794fd7c717e23721f1bc5af0cc2a620324e3c754fe359754bd438dd88b32cf
+SHA1: 77559651673217b183b8a2929ca26747bb9e19f5
+MD5sum: 54012c70d3bcf617be0da232d7365d1e
 Description: Backup Archiving Recovery Open Sourced - metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -26,22 +26,22 @@ Description: Backup Archiving Recovery Open Sourced - metapackage
 
 Package: bareos-bconsole
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 233
+Installed-Size: 234
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libreadline7 (>= 6.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libreadline7 (>= 6.0), libstdc++6 (>= 5.2)
 Conflicts: bacula-console
 Replaces: bacula-console
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-bconsole_21.1.3-stretch_amd64.deb
-Size: 51504
-SHA256: 794cb921a65aa20fdded5ba6aab4ffd211990db7391784de725d70e4ab9b27b4
-SHA1: 930eaa700d5da4f14dba7f50829f86ad40c58aaf
-MD5sum: 7397c6d7e56583b702a8e59e0cc6908d
+Filename: pool/main/b/bareos/bareos-bconsole_21.1.4-stretch_amd64.deb
+Size: 51760
+SHA256: b1ed35843982475beccd841868a561be50df618ce415c2b0c07e463b3e88dda2
+SHA1: d007d3df74eea12530e83888f9e025d6b41c5bab
+MD5sum: 8c1e4f29c04741538cf7084225179f3a
 Description: Backup Archiving Recovery Open Sourced - text console
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -53,20 +53,20 @@ Description: Backup Archiving Recovery Open Sourced - text console
 
 Package: bareos-client
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 97
-Depends: bareos-bconsole (>= 21.1.3-stretch), bareos-filedaemon (>= 21.1.3-stretch)
+Installed-Size: 98
+Depends: bareos-bconsole (>= 21.1.4-stretch), bareos-filedaemon (>= 21.1.4-stretch)
 Suggests: bareos-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-client_21.1.3-stretch_amd64.deb
-Size: 29412
-SHA256: 5d2a32f83ba9c21a09663d6b1e161da8b6e105eb32b3b31c4a24f582958049c8
-SHA1: 42c7cca8fa68947d0c2ffbb3d741cce352fb7619
-MD5sum: 59815fd1665a1a8f6a2b73a3bba3a424
+Filename: pool/main/b/bareos/bareos-client_21.1.4-stretch_amd64.deb
+Size: 29740
+SHA256: 0b91e06e229d406f4579c6ee1d86ca412e00c216a778a1451824b88a5e953a63
+SHA1: 77acf5a93db8c1d72f2e40cd083e28478ef62241
+MD5sum: 6677b8b8b71901a9ccc73e1da000a5ed
 Description: Backup Archiving Recovery Open Sourced - client metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -76,21 +76,21 @@ Description: Backup Archiving Recovery Open Sourced - client metapackage
 
 Package: bareos-common
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 2152
+Installed-Size: 2157
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
 Depends: gawk, openssl, libacl1 (>= 2.2.51-8), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), liblzo2-2, libssl1.1 (>= 1.1.0), libstdc++6 (>= 6), zlib1g (>= 1:1.2.0)
 Conflicts: bacula-common, bacula-director-common
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-common_21.1.3-stretch_amd64.deb
-Size: 706912
-SHA256: 9e4f0723765f710abfc9de1313684d84f105dfbfe2abc7a08276302dd10bf565
-SHA1: c4f08ba745faf173c876c9bf5dd415b53a8e8ac3
-MD5sum: 2d6512539d38e69a4860d093c8a59f58
+Filename: pool/main/b/bareos/bareos-common_21.1.4-stretch_amd64.deb
+Size: 708376
+SHA256: 2c8f7ea5f557e8a38f8a8417b9169f3077b8421799befb80e42810117cacd12b
+SHA1: 56614c73470ecb460f07572ba5f987158d9382ac
+MD5sum: 7c4c0c5dcf97b18674377a7e51c212e9
 Description: Backup Archiving Recovery Open Sourced - common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -99,20 +99,20 @@ Description: Backup Archiving Recovery Open Sourced - common files
 
 Package: bareos-database-common
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 334
+Installed-Size: 335
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-database-postgresql (= 21.1.3-stretch), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-database-postgresql (= 21.1.4-stretch), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-common_21.1.3-stretch_amd64.deb
-Size: 99438
-SHA256: b7551035f1fb26ceea20788fb30c6b1fe2bd6d430191127c77d09185f7f084d3
-SHA1: 265c317e32cc4d0a96ca51097bed749f789d68cb
-MD5sum: 1aeb10788bd79011d3629920fe51ff75
+Filename: pool/main/b/bareos/bareos-database-common_21.1.4-stretch_amd64.deb
+Size: 99622
+SHA256: c51d2a2623064f7d62b4c7b4ff9271ab5c9413b1241db906713a90d1022fdf38
+SHA1: dda0821392b52cddcf13eee5f2b10b3c44d5ddb5
+MD5sum: e81027e7f8cdefbfbd26aee5283b9334
 Description: Backup Archiving Recovery Open Sourced - common catalog files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -122,21 +122,21 @@ Description: Backup Archiving Recovery Open Sourced - common catalog files
 
 Package: bareos-database-postgresql
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 300
+Installed-Size: 301
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
 Depends: dbconfig-pgsql | dbconfig-no-thanks, lsb-base (>= 3.2-13), postgresql-client, bareos-common, bareos-database-common, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpq5, libstdc++6 (>= 5.2)
 Suggests: postgresql
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-postgresql_21.1.3-stretch_amd64.deb
-Size: 58644
-SHA256: ec8094aef61c26c6a58e53b1f4c32ce190f518992725b3f3571c72655fc32dd1
-SHA1: 5bf25cca6fccef676a3a7b57202b6ef97160e132
-MD5sum: d9368fd396b4fe7a3324a5f0a3f02227
+Filename: pool/main/b/bareos/bareos-database-postgresql_21.1.4-stretch_amd64.deb
+Size: 58936
+SHA256: 9d00d221b6490f2a00bbae74104ff727ba9349e72eb07758f705a368368be4bb
+SHA1: fca32a68561716ec3fcc535ce0be9d002c065414
+MD5sum: 679a4f0979cf91e69f2cbc75dfedd6d5
 Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -146,21 +146,21 @@ Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
 
 Package: bareos-database-tools
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 408
+Installed-Size: 409
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-database-common (= 21.1.3-stretch), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-database-common (= 21.1.4-stretch), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
 Conflicts: bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-tools_21.1.3-stretch_amd64.deb
-Size: 119070
-SHA256: a429de4a828ff7b10351b4a2b397039fe8875fd8b666be9a132541dc580dc8f8
-SHA1: 449e0f1ae8202c06f061a2675a29ccf11f36e025
-MD5sum: 1f6637a3f4c3830de94c6b07a8af1aaa
+Filename: pool/main/b/bareos/bareos-database-tools_21.1.4-stretch_amd64.deb
+Size: 119234
+SHA256: 6bc0f98ad1b7b5e605221c7b9de0533a07d31a079ff8626b25ea378ad68039c2
+SHA1: 6e9d49d3b4888d39d606369a06890e5f1da8cb4e
+MD5sum: 1c6fd5579a0960c9c046ee4e908a54c4
 Description: Backup Archiving Recovery Open Sourced - database tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -169,23 +169,23 @@ Description: Backup Archiving Recovery Open Sourced - database tools
 
 Package: bareos-director
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 1203
+Installed-Size: 1204
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 21.1.3-stretch), bareos-database-common (= 21.1.3-stretch), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), init-system-helpers (>= 1.18~)
+Depends: bareos-common (= 21.1.4-stretch), bareos-database-common (= 21.1.4-stretch), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), init-system-helpers (>= 1.18~)
 Recommends: logrotate
 Conflicts: bacula-director
 Replaces: bacula-director
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-director_21.1.3-stretch_amd64.deb
-Size: 398676
-SHA256: 487c5798f57022e81333d573cda11c4220aa4217deb1c09571e2e891780d4825
-SHA1: 8e50730a0e0933ecae90f6287872ac6e17dd4e94
-MD5sum: 7a0db6d2afa3c3451aaab3763299a5e5
+Filename: pool/main/b/bareos/bareos-director_21.1.4-stretch_amd64.deb
+Size: 398562
+SHA256: 4b4ab909c8ad964f641260aa3dae8ab90a66bcca72446071755f0f5813f979bc
+SHA1: 49f9ece1bbd3c2580bf8e8685853c52d5776e124
+MD5sum: 92335e0951b80d47abe75e7b49e2e998
 Description: Backup Archiving Recovery Open Sourced - director daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -198,20 +198,20 @@ Description: Backup Archiving Recovery Open Sourced - director daemon
 
 Package: bareos-director-python-plugins-common
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 111
+Installed-Size: 112
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-director-python-plugins-common_21.1.3-stretch_amd64.deb
-Size: 31606
-SHA256: 66ff2891a6d117d4ca68497aaca62fe669fdd530486b5bd66c444908d6b1a83a
-SHA1: 2f5b18afc3b16134c4a6ea51ca4c6b5c5e3be63c
-MD5sum: 5ad0076350b4519acc9b70c83893882e
+Filename: pool/main/b/bareos/bareos-director-python-plugins-common_21.1.4-stretch_amd64.deb
+Size: 31910
+SHA256: a5bf979c5be375d0cfa0edda0c6fb1ddfe4175f16f2e3640c908784088c08c99
+SHA1: 3f74b015d6220353742ac48368def2fec4ced909
+MD5sum: daf298f33f41e9625173a29bc1bee2e3
 Description: Backup Archiving Recovery Open Sourced - director Python plugin common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -220,23 +220,23 @@ Description: Backup Archiving Recovery Open Sourced - director Python plugin com
 
 Package: bareos-director-python2-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 148
+Installed-Size: 149
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-director-python-plugins-common (= 21.1.3-stretch), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-director-python-plugins-common (= 21.1.4-stretch), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 5.2)
 Conflicts: bareos-director-python-plugin
 Replaces: bareos-director-python-plugin
-Provides: bareos-director-python-plugin (= 21.1.3-stretch)
+Provides: bareos-director-python-plugin (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-director-python2-plugin_21.1.3-stretch_amd64.deb
-Size: 41086
-SHA256: 60e4cda5ba6d77ac771b3f9f99c5e5d878c8b824d677d8760e25a23e073f83db
-SHA1: 334b646065d128ce535854eec0419c16fd3590ab
-MD5sum: 630c49377ae181014257cee57752f6c3
+Filename: pool/main/b/bareos/bareos-director-python2-plugin_21.1.4-stretch_amd64.deb
+Size: 41440
+SHA256: 6034661fef87bf547c21563557e34441b461c9fc275d6236c9082a32c522b0dd
+SHA1: 91fce43592f4ce7148c5345ac0443e323bd436a2
+MD5sum: 184bad4623530bd93fa2c3e1ee7e631e
 Description: Backup Archiving Recovery Open Sourced - director Python plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -245,22 +245,22 @@ Description: Backup Archiving Recovery Open Sourced - director Python plugin
 
 Package: bareos-filedaemon
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 398
+Installed-Size: 399
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 21.1.3-stretch), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4), init-system-helpers (>= 1.18~)
+Depends: bareos-common (= 21.1.4-stretch), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4), init-system-helpers (>= 1.18~)
 Conflicts: bacula-fd
 Replaces: bacula-fd, bareos-universal-client
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-filedaemon_21.1.3-stretch_amd64.deb
-Size: 127750
-SHA256: e8931d0b1f2e0936c2dce6df95555d2ab62c0fa0560eb262bdc3e73b14a2f536
-SHA1: df59e7c82f44bf24f9407ddfd0dec0b30c9e1cbe
-MD5sum: afcdaad2f7b6f574bd90cf51b3c98d27
+Filename: pool/main/b/bareos/bareos-filedaemon_21.1.4-stretch_amd64.deb
+Size: 128168
+SHA256: 43ae9035cca5fa68dc85785854a6819b71017e448e4a88d8be5f8a22fc4e8f0a
+SHA1: da9ee8d37c0d7628b6bcf45ffc9cb83f6e903952
+MD5sum: 23d7965f68fbcdf00287914a73602640
 Description: Backup Archiving Recovery Open Sourced - file daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -273,20 +273,20 @@ Description: Backup Archiving Recovery Open Sourced - file daemon
 
 Package: bareos-filedaemon-ldap-python-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 129
+Installed-Size: 130
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python2-plugin (= 21.1.3-stretch), python-ldap
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python2-plugin (= 21.1.4-stretch), python-ldap
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-ldap-python-plugin_21.1.3-stretch_amd64.deb
-Size: 34598
-SHA256: 8f3e86c52d9155d0bbd6855fb17204d1be0c07ec65cfdbd3e56a46e316b8cf00
-SHA1: cc53b75f551ac4bd9044505974ce897f2340d282
-MD5sum: 62a55ba09e770f6ec3a48547955c8c79
+Filename: pool/main/b/bareos/bareos-filedaemon-ldap-python-plugin_21.1.4-stretch_amd64.deb
+Size: 34924
+SHA256: 83ea72f9d3b181a28b6b1600e270da05e0f796da6b7167fddef78ccedac768f9
+SHA1: 0ba9cba81ad60b1e3fbfdcc605333507396fffa7
+MD5sum: c47ce9131bae94992c248d4097d1e70e
 Description: Backup Archiving Recovery Open Sourced - file daemon LDAP plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -295,21 +295,21 @@ Description: Backup Archiving Recovery Open Sourced - file daemon LDAP plugin
 
 Package: bareos-filedaemon-libcloud-python-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 161
+Installed-Size: 162
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python-plugin (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python-plugin (= 21.1.4-stretch)
 Recommends: bareos-filedaemon-python3-plugin
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-libcloud-python-plugin_21.1.3-stretch_amd64.deb
-Size: 38758
-SHA256: 6a8d7663cc12fd7f653eefb32ebc778aac32c8611b6c517fd5dfd5d4e6435ff5
-SHA1: be530e988e9877af16edbd9519d582095ee2da97
-MD5sum: 6edd3a0715b3f984522fcef44922fcca
+Filename: pool/main/b/bareos/bareos-filedaemon-libcloud-python-plugin_21.1.4-stretch_amd64.deb
+Size: 39064
+SHA256: 085607a6bc9eea5c9fd1ab4975233f44fc087c7aa578bcae4782cdfc96f14ae9
+SHA1: 83a119837fd197500408e0a46021a3131813fcca
+MD5sum: 83761fd9aff623cf4614e77b2ef70b45
 Description: Backup Archiving Recovery Open Sourced - file daemon Apache Libcloud plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -318,21 +318,21 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Apache Libclou
 
 Package: bareos-filedaemon-mariabackup-python-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 122
+Installed-Size: 123
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python-plugin (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python-plugin (= 21.1.4-stretch)
 Recommends: bareos-filedaemon-python3-plugin
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-mariabackup-python-plugin_21.1.3-stretch_amd64.deb
-Size: 34402
-SHA256: d575ae01442ffcd585f9f2af72365abc2f0ca172524ead9b54664af4fdaaba1f
-SHA1: 457c5df624362f0ff5f535059978beb7719b9633
-MD5sum: 8179882c8affdd61fd7a1d4ab5b12002
+Filename: pool/main/b/bareos/bareos-filedaemon-mariabackup-python-plugin_21.1.4-stretch_amd64.deb
+Size: 34726
+SHA256: 1c610cf6125aeb53933bf1499a7602b79cef21127c17156697762fd6d3750af5
+SHA1: c1e941045fec557e45a566487654d36d5d5e4301
+MD5sum: b3e3f1ff499a85c4395a80f496fcc0f5
 Description: Backup Archiving Recovery Open Sourced - file daemon Mariabackup plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -341,21 +341,21 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Mariabackup pl
 
 Package: bareos-filedaemon-percona-xtrabackup-python-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 122
+Installed-Size: 123
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python-plugin (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python-plugin (= 21.1.4-stretch)
 Recommends: bareos-filedaemon-python3-plugin
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-percona-xtrabackup-python-plugin_21.1.3-stretch_amd64.deb
-Size: 34426
-SHA256: 3593a8e1d365fa215710ed5743d5e1169e4430bbfd9514664d590003be4a65f8
-SHA1: e6273cdfc1057534b4a608c40b0ea8852b9dd2f1
-MD5sum: bf8b67e1f4542903628cdd15c7cb9065
+Filename: pool/main/b/bareos/bareos-filedaemon-percona-xtrabackup-python-plugin_21.1.4-stretch_amd64.deb
+Size: 34744
+SHA256: ef436e3922a704b41b5c679d7cf0c6179f5ea830d51304f9daa72fe5166520af
+SHA1: 14120f7a46826b5f0d07c77d76c4213d5b5fcaea
+MD5sum: 1e6b21b1ed90aa9ac89b4b8bfcef6745
 Description: Backup Archiving Recovery Open Sourced - file daemon Percona XtraBackup plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -364,21 +364,21 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Percona XtraBa
 
 Package: bareos-filedaemon-postgresql-python-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 127
+Installed-Size: 128
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python-plugin (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python-plugin (= 21.1.4-stretch)
 Recommends: bareos-filedaemon-python3-plugin
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-postgresql-python-plugin_21.1.3-stretch_amd64.deb
-Size: 35694
-SHA256: d9512993873e46a000cccdfe1ad7d8d2339a2b2e90fd932bb4ea16d533336100
-SHA1: a60d7665b7e8a5a7bac5cfb864aa00bb3d114491
-MD5sum: 60aace8cab55fddbed0802972de79c62
+Filename: pool/main/b/bareos/bareos-filedaemon-postgresql-python-plugin_21.1.4-stretch_amd64.deb
+Size: 36014
+SHA256: cc3aa047050aa8231b33b096ac18fb2edaa7413f01f49048d994e6f82639ae0a
+SHA1: 8000664a673c9f1f9081f4ab180976d7bfd1a2ba
+MD5sum: 0d7d74f7011a000693ef444579a1791b
 Description: Backup Archiving Recovery Open Sourced - file daemon PostgreSQL plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -387,20 +387,20 @@ Description: Backup Archiving Recovery Open Sourced - file daemon PostgreSQL plu
 
 Package: bareos-filedaemon-python-plugins-common
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 137
+Installed-Size: 138
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-python-plugins-common_21.1.3-stretch_amd64.deb
-Size: 35962
-SHA256: 8ca663580668e557b4a87929294d95f563d17887d1636193abe5f4e1912adfca
-SHA1: 4996db06e574f9748fdbd4b678566374fdd610ad
-MD5sum: ce07239f87c7d24deec1bd892a48b99a
+Filename: pool/main/b/bareos/bareos-filedaemon-python-plugins-common_21.1.4-stretch_amd64.deb
+Size: 36250
+SHA256: 047a257358c8fd0f473e7b0d857cab52afa0c29449cf92bf51ef83606852d6b1
+SHA1: 790f5c7ef4cd1fb31dc9b61e53b4a477d66b6ada
+MD5sum: 0e9b2eac5dbe17132502ec3068fa2ae2
 Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -409,24 +409,24 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin 
 
 Package: bareos-filedaemon-python2-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 199
+Installed-Size: 200
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-filedaemon-python-plugins-common (= 21.1.3-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 4.1.1)
+Depends: bareos-common (= 21.1.4-stretch), bareos-filedaemon-python-plugins-common (= 21.1.4-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 4.1.1)
 Recommends: python-dateutil
 Conflicts: bareos-filedaemon-python-plugin (<= 20.0.0)
 Replaces: bareos-filedaemon-python-plugin
-Provides: bareos-filedaemon-python-plugin (= 21.1.3-stretch)
+Provides: bareos-filedaemon-python-plugin (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-filedaemon-python2-plugin_21.1.3-stretch_amd64.deb
-Size: 53856
-SHA256: e6327d93a949bbb6690de0ebd742a81b734501dd5737bc9058b27d56924bac3a
-SHA1: d56b94c7e890b27422ac1ff2bc0b55dcbd8440ad
-MD5sum: e70a903563f4b1ffc3f2402061d960a5
+Filename: pool/main/b/bareos/bareos-filedaemon-python2-plugin_21.1.4-stretch_amd64.deb
+Size: 54212
+SHA256: 713c97b480fe130a261ea483c82936fd79e47f514cccaf0ecd207ae445c08cc7
+SHA1: e17d9361feb050f64e8d680d97b40cfd5e4244f8
+MD5sum: 76136e1997fe8fc6ccbfddef87952a38
 Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -435,12 +435,12 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin
 
 Package: bareos-storage
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 344
+Installed-Size: 345
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 21.1.3-stretch), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), init-system-helpers (>= 1.18~)
+Depends: bareos-common (= 21.1.4-stretch), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), init-system-helpers (>= 1.18~)
 Recommends: bareos-tools
 Conflicts: bacula-sd
 Breaks: bareos-storage-tape (<< 14.2.6~)
@@ -448,11 +448,11 @@ Replaces: bacula-sd
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage_21.1.3-stretch_amd64.deb
-Size: 106994
-SHA256: d5dfdc988e0f6c19afec3753dff41b8ce36d0d2e96574c2205ca03eacb3665d0
-SHA1: 39a6c4e88b5a9f952c3c2077456e7181d96a4b99
-MD5sum: 5846e2deb9a25f2c5cde138f62cc9bf6
+Filename: pool/main/b/bareos/bareos-storage_21.1.4-stretch_amd64.deb
+Size: 107426
+SHA256: 057e3290c659201e90920080352cfd1c928a1287a6d078d7262242b51e19bfdf
+SHA1: 258806c8d6782534d08954fd2c91376bb7d3d879
+MD5sum: b5e82703c80e4cd2d45eaa1d9b2eec77
 Description: Backup Archiving Recovery Open Sourced - storage daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -466,20 +466,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon
 
 Package: bareos-storage-droplet
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 520
+Installed-Size: 521
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-storage (= 21.1.3-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjson-c3 (>= 0.10), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), libxml2 (>= 2.7.4)
+Depends: bareos-storage (= 21.1.4-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjson-c3 (>= 0.10), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), libxml2 (>= 2.7.4)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-droplet_21.1.3-stretch_amd64.deb
-Size: 164718
-SHA256: bc40e9957c68f6d01052312b6c6be6a4caade44d83703792a83046534abcc2bb
-SHA1: 4b2d1539ec1f932aa6dd1a21767377d32250c588
-MD5sum: 590735523f7b0b910c0c40ddf12de0b6
+Filename: pool/main/b/bareos/bareos-storage-droplet_21.1.4-stretch_amd64.deb
+Size: 165684
+SHA256: 50f32eefccb6a4790a2e91434bb37d09568542d1bcd1c5f29e7c51b36f8163b9
+SHA1: 9cc1c49cfe181796b49db88c09b9713fdc565f53
+MD5sum: 90eb18ffe3521f3f48e3c48aed52f0ae
 Description: Backup Archiving Recovery Open Sourced - storage daemon droplet backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -488,20 +488,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon droplet bac
 
 Package: bareos-storage-fifo
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 130
+Installed-Size: 131
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-storage (= 21.1.3-stretch), lsb-base (>= 3.2-13), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-storage (= 21.1.4-stretch), lsb-base (>= 3.2-13), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-fifo_21.1.3-stretch_amd64.deb
-Size: 37138
-SHA256: 4cc85f2b9a46e3cb687f609f4cf5d11653470e4cbba560c0d384a75b7eb9ba50
-SHA1: c08cc87760bc66a4b6da8e7abadf76f4464b1561
-MD5sum: 073404c5fdb24ef411de1edd9ad25102
+Filename: pool/main/b/bareos/bareos-storage-fifo_21.1.4-stretch_amd64.deb
+Size: 37472
+SHA256: 56ddcc81a36357ea373129c3a986856373d9d7a7e7af07d639313d7370873d2c
+SHA1: c634dd233a37c247efae3c46cdbd8112172fa60e
+MD5sum: f2bc52d895f636eef9d9a3766e2fc27b
 Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -512,20 +512,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backen
 
 Package: bareos-storage-python-plugins-common
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 109
+Installed-Size: 110
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch)
+Depends: bareos-common (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-storage-python-plugins-common_21.1.3-stretch_amd64.deb
-Size: 31402
-SHA256: 50da5cb4f92871349de1d55586ea451dd9b5cceec087543a8ba372d34d6afb75
-SHA1: 53af9f1b7edd7ea19ece94cbbd7dbf9219b648b8
-MD5sum: 97b03471e3d7be76a973d72bba4a30c6
+Filename: pool/main/b/bareos/bareos-storage-python-plugins-common_21.1.4-stretch_amd64.deb
+Size: 31734
+SHA256: bc60a75535aad5504debc9d06a5472e08d374e7ff07e3fb93c47bcd323d9a506
+SHA1: 855907e5b49ea841434d995bac44547f714dd217
+MD5sum: 503557b46b0a4499456818554c224468
 Description: Backup Archiving Recovery Open Sourced - storage daemon Python plugin common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -534,23 +534,23 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon Python plug
 
 Package: bareos-storage-python2-plugin
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 148
+Installed-Size: 149
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), bareos-storage-python-plugins-common (= 21.1.3-stretch), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-storage-python-plugins-common (= 21.1.4-stretch), libc6 (>= 2.4), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libpython2.7 (>= 2.7), libstdc++6 (>= 5.2)
 Conflicts: bareos-storage-python-plugin
 Replaces: bareos-storage-python-plugin
-Provides: bareos-storage-python-plugin (= 21.1.3-stretch)
+Provides: bareos-storage-python-plugin (= 21.1.4-stretch)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: python
-Filename: pool/main/b/bareos/bareos-storage-python2-plugin_21.1.3-stretch_amd64.deb
-Size: 41200
-SHA256: a023b8deb93daa9347c5ba1cf69f8b86c310a59ace32d732f610835608cf27d8
-SHA1: 4592387a19de9a3286b290bd41fa49fa07ffc5ba
-MD5sum: 4f9e05e76f8bfb92dfd0c0f079f968ec
+Filename: pool/main/b/bareos/bareos-storage-python2-plugin_21.1.4-stretch_amd64.deb
+Size: 41534
+SHA256: 20f0a0e1c53ff4fc8f3930ff93fc116bd088e6638db0e0c29b54993e48e5ab83
+SHA1: 59ea9b23d4fb5ca9c6f62e0a360292da5346ad3a
+MD5sum: e2650638e0ac607c02906abfc8934925
 Description: Backup Archiving Recovery Open Sourced - storage daemon Python plugin
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -559,12 +559,12 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon Python plug
 
 Package: bareos-storage-tape
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 317
+Installed-Size: 318
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 21.1.3-stretch), bareos-storage (= 21.1.3-stretch), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), bareos-storage (= 21.1.4-stretch), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
 Recommends: mt-st
 Suggests: scsitools, sg3-utils
 Breaks: bareos-storage (<< 14.2.6~)
@@ -572,11 +572,11 @@ Replaces: bareos-storage (<< 14.2.6~)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-tape_21.1.3-stretch_amd64.deb
-Size: 90006
-SHA256: d87787cfd46e5c18f4d665b1f362720c550cf8d2f1861e2710c76fad1a8a8b02
-SHA1: 4ddf606b8b4d4feaf59c56468c766b0501010963
-MD5sum: 2dc68f9db40e28a26e194ed1acdb771f
+Filename: pool/main/b/bareos/bareos-storage-tape_21.1.4-stretch_amd64.deb
+Size: 90348
+SHA256: e19cfc52f54e4469f32f204fae4e346f149d723d5523d94842722fa807f58bfa
+SHA1: acc3354781a5cbad0e52a47539a9fb36ea5fb77b
+MD5sum: 095e948e8071f8c0e7668006a6c11fb8
 Description: Backup Archiving Recovery Open Sourced - storage daemon tape support
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -592,21 +592,21 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon tape suppor
 
 Package: bareos-tools
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 248
+Installed-Size: 249
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 21.1.3-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 21.1.4-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2)
 Conflicts: bacula-sd, bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-tools_21.1.3-stretch_amd64.deb
-Size: 61116
-SHA256: 6a2a4a4616707a3e2c3c379588449fd2fa55be5c08ec9d6d7601baef5ba1424b
-SHA1: 602bb6d7d44a661d5d952d74b4df5f1dc3131bf4
-MD5sum: 4d379059c5dd3fdd4af2a2d0247710de
+Filename: pool/main/b/bareos/bareos-tools_21.1.4-stretch_amd64.deb
+Size: 61464
+SHA256: d5a096527bbb92902164641b5df9fb5064d2ece5b6b70367328eb05a4683d7f8
+SHA1: c67f026d4d2aa8d16e23e2e34f0abaa0b9f23b61
+MD5sum: 59a54c70a2c131e3cda9fb4b4ba13a2d
 Description: Backup Archiving Recovery Open Sourced - common tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -616,22 +616,22 @@ Description: Backup Archiving Recovery Open Sourced - common tools
 
 Package: bareos-traymonitor
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 288
-Depends: bareos-common (= 21.1.3-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libqt5core5a (>= 5.7.0), libqt5gui5 (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2)
+Installed-Size: 289
+Depends: bareos-common (= 21.1.4-stretch), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libqt5core5a (>= 5.7.0), libqt5gui5 (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2)
 Suggests: kde | gnome-desktop-environment
 Conflicts: bacula-traymonitor
 Replaces: bacula-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-traymonitor_21.1.3-stretch_amd64.deb
-Size: 92864
-SHA256: d34f65b8b56f6dbfcc2752797414ce3911ad079c0da9c9e8be553d3909620c98
-SHA1: 7c1640184f2183bcebb9215182314a356a48086a
-MD5sum: fbf7d00ed7b70df672431a5d6cb32ee2
+Filename: pool/main/b/bareos/bareos-traymonitor_21.1.4-stretch_amd64.deb
+Size: 93180
+SHA256: 3cc6010abb891c195a6114e239f3493aed0408cefd14cd508c5c8acd6bcbad5b
+SHA1: c49ea1034f21af9dcbb11d5c04c98ddafce69736
+MD5sum: 04a07cd632c00732679fb0b29bd37db3
 Description: Backup Archiving Recovery Open Sourced - tray monitor
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -644,19 +644,19 @@ Description: Backup Archiving Recovery Open Sourced - tray monitor
 
 Package: bareos-webui
 Source: bareos
-Version: 21.1.3-stretch
+Version: 21.1.4-stretch
 Architecture: all
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 18064
-Depends: apache2 | httpd, libapache2-mod-php | libapache2-mod-php5 | libapache2-mod-php7 | php | php5 | php7 | php-cgi, php-common | php5-common | php7-common, php-date | php5-date | php7-date, php-intl | php5-intl | php7-intl, php-json | php5-json | php7-json, php-curl | php5-curl | php7-curl, php-gettext | php5-gettext | php7-gettext | php7.4-gettext
+Installed-Size: 18065
+Depends: apache2 | httpd, libapache2-mod-php, php-date, php-intl, php-json, php-curl
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-webui_21.1.3-stretch_all.deb
-Size: 2358936
-SHA256: f897fc95ac6b6c03ea8b7b8bfc96645e64a9993d14e12e3ef5e81a3f6a27df22
-SHA1: 6d77a418867ffc446208bd877802a1a6ed7abc89
-MD5sum: c51a9954356b3c9c74430ec36cd33aa6
+Filename: pool/main/b/bareos/bareos-webui_21.1.4-stretch_all.deb
+Size: 2359138
+SHA256: 693b7d1fa5798f07aad5000b5da87e25a316108fada52167a04e104d65163ebe
+SHA1: 38eb848ff9a2aeb309b436c24652631032fc0af3
+MD5sum: b9ddf6d450e4a486186811e6c66403e0
 Description: Backup Archiving Recovery Open Sourced - webui
- This package contains the webui.
+ This package contains the Bareos WebUI.
 
