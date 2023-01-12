@@ -15,7 +15,7 @@ RUN	set -e \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
 
-# install cmake deps
+# install cmake deps && make && install
 RUN set -e \
     && echo "deb-src http://deb.debian.org/debian stretch main" >/etc/apt/sources.list.d/stretch-source.list \
     && echo "deb http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports.list \
@@ -32,6 +32,8 @@ RUN set -e \
     && apt-get source cmake \
     && cd cmake-* \
     && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
+    && cd .. \
+    && dpkg -i cmake_*_amd64.deb \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
