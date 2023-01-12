@@ -15,7 +15,7 @@ on:
         required: true
       version_tag:
         description: 'Version Tag'
-        default: '21.1.2'
+        default: '22.0.1'
         required: true
 jobs:
   build:
