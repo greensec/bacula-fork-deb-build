@@ -27,7 +27,8 @@ RUN set -e \
     && wget -O- https://download.bareos.org/current/Debian_10/Release.key | apt-key add - \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
-    && apt-get install -y -t stretch-backports-sloppy libarchive13 \
+    && apt-get install -y -t stretch-backports-sloppy libarchive13 libarchive-dev \
+    && apt-get install -y -t stretch-backports libuv1-dev \
     && apt-get build-dep -y cmake \
     && apt-get build-dep -y bareos \
     && apt-get build-dep -y python-bareos \
