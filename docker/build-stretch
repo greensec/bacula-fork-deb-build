@@ -33,7 +33,7 @@ RUN set -e \
     && cd cmake-* \
     && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
     && cd .. \
-    && dpkg -i cmake_*_amd64.deb \
+    && dpkg -i cmake-data_*_amd64.deb cmake_*_amd64.deb \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
