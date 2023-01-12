@@ -51,6 +51,10 @@ git archive master | bzip2 > ../bareos_${VERSION_TAG}.orig.tar.bz2
   echo ""
 ) > debian/changelog
 
+if [ -d "../patches.$DEB_FLAVOR" ]; then
+  cp -va ../patches.$DEB_FLAVOR debian/
+fi
+
 DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
 cd ..
 rm -vf *-dbg*.deb
