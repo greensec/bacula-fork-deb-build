@@ -18,9 +18,9 @@ RUN	set -e \
 RUN set -e \
     && echo "deb-src http://deb.debian.org/debian bullseye main" >/etc/apt/sources.list.d/bullseye-source.list \
     && echo "deb http://http.debian.net/debian bullseye-backports main" >/etc/apt/sources.list.d/bullseye-backports.list \
-    && echo "deb http://download.bareos.org/bareos/experimental/nightly/Debian_11 /" > /etc/apt/sources.list.d/bareos.list \
-    && echo "deb-src http://download.bareos.org/bareos/experimental/nightly/Debian_11 /" >> /etc/apt/sources.list.d/bareos.list \
-    && wget -O- "https://download.bareos.org/bareos/experimental/nightly/Debian_11/Release.key" | apt-key add - \
+    && echo "deb http://download.bareos.org/bareos/current/Debian_11 /" > /etc/apt/sources.list.d/bareos.list \
+    && echo "deb-src http://download.bareos.org/bareos/current/Debian_11 /" >> /etc/apt/sources.list.d/bareos.list \
+    && wget -O- "https://download.bareos.org/bareos/current/Debian_11/Release.key" | apt-key add - \
     && apt-get update \
     && apt-get install -y git git-buildpackage cmake \
     && apt-get build-dep -y bareos \
