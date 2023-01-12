@@ -19,7 +19,6 @@ RUN	set -e \
 RUN set -e \
     && echo "deb http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports.list \
     && echo "deb http://http.debian.net/debian stretch-backports-sloppy main" >>/etc/apt/sources.list.d/stretch-backports.list \
-    && echo "deb-src http://http.debian.net/debian stretch-backports main" >>/etc/apt/sources.list.d/stretch-backports.list \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
     && apt-get install -y -t stretch-backports-sloppy libarchive13 libarchive-dev \
