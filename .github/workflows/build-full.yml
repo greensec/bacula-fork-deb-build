@@ -5,7 +5,7 @@ on:
     inputs:
       version_tag:
         description: 'Version Tag'
-        default: '21.1.2'
+        default: '22.0.1'
         required: true
   create:
     tags:
@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os-version: ["stretch", "buster", "bullseye"]
+        os-version: ["buster", "bullseye"]
     container:
       image: "greensec/bacula-fork-custom-build:${{ matrix.os-version }}"
       options: --privileged --device /dev/fuse
@@ -62,20 +62,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-      - name: Add stretch release
-        uses: smeinecke/apt-repo-action@v2.1.1
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
-          repo_supported_version: |
-            stretch
-            buster
-            bullseye
-          file: |
-            *-stretch_*.deb
-          file_target_version: stretch
-          private_key: ${{ secrets.APT_SIGNING_KEY }}
-          key_passphrase: ""
       - name: Add buster release
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
