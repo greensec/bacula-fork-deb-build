@@ -19,16 +19,22 @@ RUN	set -e \
 RUN set -e \
     && echo "deb http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports.list \
     && echo "deb http://http.debian.net/debian stretch-backports-sloppy main" >>/etc/apt/sources.list.d/stretch-backports.list \
+    && echo "deb-src http://http.debian.net/debian buster main" >/etc/apt/sources.list.d/buster-src.list \
     && echo "deb-src http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports-src.list \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
     && apt-get install -y -t stretch-backports-sloppy libarchive13 libarchive-dev \
     && apt-get install -y -t stretch-backports libuv1-dev \
+    && apt-get build-dep -y -t buster gcc \
     && apt-get build-dep -y -t stretch-backports cmake \
     && rm /etc/apt/sources.list.d/stretch-backports-src.list \
     && echo "deb-src http://http.debian.net/debian buster-backports main" >/etc/apt/sources.list.d/buster-backports.list \
     && apt-get update \
     && cd /root \
+    && apt-get -y source gcc \
+    && cd gcc-* \
+    && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
+    && cd .. \
     && apt-get -y source cmake \
     && cd cmake-* \
     && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
