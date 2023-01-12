@@ -24,7 +24,7 @@ RUN set -e \
     && apt-get install -y git git-buildpackage librados-dev \
     && apt-get install -y -t stretch-backports-sloppy libarchive13 libarchive-dev \
     && apt-get install -y -t stretch-backports libuv1-dev \
-    && apt-get build-dep -y cmake \
+    && apt-get build-dep -y -t stretch-backports cmake \
     && apt-get update \
     && echo "deb-src http://http.debian.net/debian buster-backports main" >/etc/apt/sources.list.d/buster-backports.list \
     && cd /root \
