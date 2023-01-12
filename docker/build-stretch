@@ -14,7 +14,8 @@ RUN	set -e \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
-# install package deps
+
+# install cmake deps
 RUN set -e \
     && echo "deb-src http://deb.debian.org/debian stretch main" >/etc/apt/sources.list.d/stretch-source.list \
     && echo "deb http://http.debian.net/debian stretch-backports main" >/etc/apt/sources.list.d/stretch-backports.list \
@@ -22,14 +23,26 @@ RUN set -e \
     && echo "deb-src http://http.debian.net/debian buster main" >/etc/apt/sources.list.d/buster-backports.list \
     && echo "deb-src http://security.debian.org/debian-security stretch/updates main" >>/etc/apt/sources.list.d/stretch-source.list \
     && echo "deb-src http://security.debian.org/debian-security buster/updates main" >>/etc/apt/sources.list.d/buster-source.list \
-    && echo "deb http://download.bareos.org/current/Debian_10 /" > /etc/apt/sources.list.d/bareos.list \
-    && echo "deb-src http://download.bareos.org/current/Debian_10 /" >> /etc/apt/sources.list.d/bareos.list \
-    && wget -O- https://download.bareos.org/current/Debian_10/Release.key | apt-key add - \
     && apt-get update \
     && apt-get install -y git git-buildpackage librados-dev \
     && apt-get install -y -t stretch-backports-sloppy libarchive13 libarchive-dev \
     && apt-get install -y -t stretch-backports libuv1-dev \
     && apt-get build-dep -y cmake \
+    && cd /root \
+    && apt-get source cmake && \
+    && cd cmake-* \
+    && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /tmp/* /var/tmp/* /var/log/*
+
+
+# install package deps
+RUN set -e \
+    && echo "deb http://download.bareos.org/current/Debian_10 /" > /etc/apt/sources.list.d/bareos.list \
+    && echo "deb-src http://download.bareos.org/current/Debian_10 /" >> /etc/apt/sources.list.d/bareos.list \
+    && wget -O- https://download.bareos.org/current/Debian_10/Release.key | apt-key add - \
+    && apt-get update \
+    && apt-get install -y -t stretch-backports-sloppy libarchive13 \
     && apt-get build-dep -y bareos \
     && apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
