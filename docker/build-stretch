@@ -27,7 +27,7 @@ RUN set -e \
     && apt-get install -y -t stretch-backports libuv1-dev \
     && apt-get build-dep -y cmake \
     && cd /root \
-    && apt-get -y -t buster source cmake \
+    && apt-get -y source cmake \
     && cd cmake-* \
     && DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b \
     && cd .. \
