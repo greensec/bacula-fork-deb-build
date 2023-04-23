@@ -68,6 +68,7 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           repo_supported_arch: amd64
           repo_supported_version: |
+            stretch
             buster
             bullseye
           file: |
@@ -81,6 +82,7 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           repo_supported_arch: amd64
           repo_supported_version: |
+            stretch
             buster
             bullseye
           file: |
