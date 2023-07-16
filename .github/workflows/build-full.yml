@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os-version: ["buster", "bullseye"]
+        os-version: ["buster", "bullseye", "bookworm"]
     container:
       image: "greensec/bacula-fork-custom-build:${{ matrix.os-version }}"
       options: --privileged --device /dev/fuse
