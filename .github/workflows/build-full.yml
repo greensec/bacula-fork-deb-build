@@ -5,7 +5,7 @@ on:
     inputs:
       version_tag:
         description: 'Version Tag'
-        default: '22.0.1'
+        default: '22.1.0'
         required: true
   create:
     tags:
@@ -71,6 +71,7 @@ jobs:
             stretch
             buster
             bullseye
+            bookworm
           file: |
             *-buster_*.deb
           file_target_version: buster
@@ -85,8 +86,24 @@ jobs:
             stretch
             buster
             bullseye
+            bookworm
           file: |
             *-bullseye_*.deb
           file_target_version: bullseye
+          private_key: ${{ secrets.APT_SIGNING_KEY }}
+          key_passphrase: ""
+      - name: Add bookworm release
+        uses: smeinecke/apt-repo-action@v2.1.2
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          repo_supported_arch: amd64
+          repo_supported_version: |
+            stretch
+            buster
+            bullseye
+            bookworm
+          file: |
+            *-bookworm_*.deb
+          file_target_version: bookworm
           private_key: ${{ secrets.APT_SIGNING_KEY }}
           key_passphrase: ""
