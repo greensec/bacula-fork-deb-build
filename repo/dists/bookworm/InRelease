@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Codename: bookworm
+Date: Sun, 16 Jul 2023 16:50:54 UTC
+Architectures: amd64
+Components: main
+Description: greensec/bacula-fork-deb-build
+MD5Sum:
+ 2defcce323869f14ef62124084dc0c44 18608 main/binary-amd64/Packages
+ 648b333db174bfd2af4a92a1a27b21a7 4346 main/binary-amd64/Packages.gz
+ c8a7ecec259dd151e51787e177ff1422 80 main/binary-amd64/Release
+SHA1:
+ 9d10086a6571cbc815a3f0764bf4e198df9f0ab9 18608 main/binary-amd64/Packages
+ d8a8ef25ce5496d2d9a514c2580dd17a211ea304 4346 main/binary-amd64/Packages.gz
+ 6ecbe32ac4e26453096e4d1b31561813d8ef7052 80 main/binary-amd64/Release
+SHA256:
+ ffa491627a74e9faeba6fa7ed369e3c50b8d25cda7b2274abb0812fad4e48f46 18608 main/binary-amd64/Packages
+ 03cdb250c78cc28d892f8dac15819244140d36899ca50043ecf2f9793a8855a8 4346 main/binary-amd64/Packages.gz
+ 084ef64666deb6f4717d923bb0fb38510ac8b1d20eb1446fe10b003809be8b75 80 main/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE2ULbBj4dMU0J5fOKN2B/7oh8UgYFAmS0H+4ACgkQN2B/7oh8
+UgZ1yA/+NKaa1K+TKGWU89bLZwSRHxCSkTnEtnIAYg3ZcZFW4hZuZPuA3FSUuXDi
+y/6cFMcUmWhLT2GuZEhDKyasfso2qme+d04mam3TisNaaDIU9FuZJ68nDzUo72Kj
+7PEd5hWLUKYVJsQ55m+tc6LHLeLchVz1Iakz1SC5u8M6CPZjWM9OORAy6A51UUJe
+nUtYMu6tFBG11aPuFrOYr5ht2beWji6T+1jjlc/EenJd2blTxZNMemodndc07L6b
+V5sUnoYfm2R3kcRwsPwVdghGP8h1CXLAoH/i5gN6P0bya5jvrj8qgmtUTZvhv4HG
+nMWIWn0r5im946oO5TMcwOjCJBc1BF2B2fbSdIoauHE4JJK/G/uc/98Xdztzt4YK
+ABeokSCvZcxjye86xB+96U3sKnKwUSXV93NbfLje6rSsA3BYM0AExZaqMGW9c0yJ
+0Rsp0yL4md6czkElzWcNtVfx2z9NITBQpdxiWmFrzVPLzM4UWJzEyFK/CKyt/V7J
+wN6Zsv6VFVzvarrE0ST70/vqR9X7AVamRB5n34u8/AFUPaxZQeT3+Mxy7ugaxQ1E
+CdABwNRNKmA0W9SuaUdHc/dDgz8XdH/2ACAzT3LGzOQC+Db07VX/ikkgOCsvi1uD
+4f6nEO4UXDc2S47qzz4LS4EpZSVV3dNG0/YME+VlwRQi1zoqaJg=
+=Xsuj
+-----END PGP SIGNATURE-----

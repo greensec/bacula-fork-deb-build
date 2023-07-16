@@ -19,3 +19,10 @@ Components: main
 SignWith: D942DB063E1D314D09E5F38A37607FEE887C5206
 
 
+Description: greensec/bacula-fork-deb-build
+Codename: bookworm
+Architectures: amd64
+Components: main
+SignWith: D942DB063E1D314D09E5F38A37607FEE887C5206
+
+
