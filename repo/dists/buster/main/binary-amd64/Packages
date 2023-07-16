@@ -1,17 +1,17 @@
 Package: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 96
-Depends: bareos-director (= 22.0.3-buster), bareos-storage (= 22.0.3-buster), bareos-client (= 22.0.3-buster)
+Installed-Size: 97
+Depends: bareos-director (= 22.1.0-buster), bareos-storage (= 22.1.0-buster), bareos-client (= 22.1.0-buster)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos_22.0.3-buster_amd64.deb
-Size: 28620
-SHA256: be50063db389428bb48f6efc28c7b45925496458c3b184e8d60bb8bf9a6fbabd
-SHA1: 5bd567ee8641a2cfd971f5506245f19a92f21956
-MD5sum: 0c86cc48786157b406b2ce0670ffcadc
+Filename: pool/main/b/bareos/bareos_22.1.0-buster_amd64.deb
+Size: 29272
+SHA256: 72d3d63671104b96f995bec4c4a1a1245c8e91dccc3401152c669c6cbdc3fd3f
+SHA1: f732d8d4d9eaa073bf0f8751956f31a93d8af70c
+MD5sum: 3b7ff1a68844a5871e005151bc73aa3a
 Description: Backup Archiving Recovery Open Sourced - metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -26,22 +26,22 @@ Description: Backup Archiving Recovery Open Sourced - metapackage
 
 Package: bareos-bconsole
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 826
+Installed-Size: 827
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 22.0.3-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libreadline7 (>= 6.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libreadline7 (>= 6.0), libstdc++6 (>= 5.2)
 Conflicts: bacula-console
 Replaces: bacula-console
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-bconsole_22.0.3-buster_amd64.deb
-Size: 148068
-SHA256: c15c029880afe8d4a10bc35433246905f6db2340aa3db8b976d8bde6f5ccb010
-SHA1: 0247b7efa27e089ae271f331b858fcb17db7549c
-MD5sum: 53d89c5da0a77868c91b85a4cf276c47
+Filename: pool/main/b/bareos/bareos-bconsole_22.1.0-buster_amd64.deb
+Size: 148788
+SHA256: bf765c604e5b38e019b6de430c0bc3707b5fc4550953b8f8c1525a547ece8ae5
+SHA1: 35c531cf16869afa71888d12f88a7d2ca1352960
+MD5sum: a5b7a261c130d715e7b6ac9cc2319650
 Description: Backup Archiving Recovery Open Sourced - text console
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -53,20 +53,20 @@ Description: Backup Archiving Recovery Open Sourced - text console
 
 Package: bareos-client
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 96
-Depends: bareos-bconsole (>= 22.0.3-buster), bareos-filedaemon (>= 22.0.3-buster)
+Installed-Size: 97
+Depends: bareos-bconsole (>= 22.1.0-buster), bareos-filedaemon (>= 22.1.0-buster)
 Suggests: bareos-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-client_22.0.3-buster_amd64.deb
-Size: 28456
-SHA256: 3844966580031575f689835f6b2cd2b423ddf7105db25279e6379c47bc9a6b6e
-SHA1: b895f38e4e1bbb7e83f3190d29bfb886ae5542ce
-MD5sum: 3c00501712746509fb7f193772b79d49
+Filename: pool/main/b/bareos/bareos-client_22.1.0-buster_amd64.deb
+Size: 29128
+SHA256: 11f7e2eba07cc628532c419215c15fc440bd1b2b7438d59a38a3632ad362c381
+SHA1: 929b282ae58922e98f26873834da8f2506aea421
+MD5sum: 291a681339497593a050e85838d25deb
 Description: Backup Archiving Recovery Open Sourced - client metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -76,21 +76,21 @@ Description: Backup Archiving Recovery Open Sourced - client metapackage
 
 Package: bareos-common
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 3291
-Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: gawk, openssl, libacl1 (>= 2.2.23), libc6 (>= 2.28), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), liblzo2-2, libssl1.1 (>= 1.1.0), libstdc++6 (>= 6), zlib1g (>= 1:1.2.0)
+Installed-Size: 3311
+Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser, coreutils, findutils, grep, gawk, libc-bin, passwd, openssl, sed
+Depends: libacl1 (>= 2.2.23), libc6 (>= 2.28), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), liblzo2-2, libssl1.1 (>= 1.1.0), libstdc++6 (>= 6), zlib1g (>= 1:1.2.0)
 Conflicts: bacula-common, bacula-director-common
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-common_22.0.3-buster_amd64.deb
-Size: 936784
-SHA256: 16e8edeab1723b1c50bc0e60991644dbbd3de2d9c6e057b4ac978a665afdfaf3
-SHA1: 4be215c8b8407c01be91d1f51beddf6b9f17166a
-MD5sum: e6abf6216c2f9e9cde2b188a1ceab280
+Filename: pool/main/b/bareos/bareos-common_22.1.0-buster_amd64.deb
+Size: 945288
+SHA256: b84b34dc8c1d14461acd614ce7effadd1db899d584c4274629c0e67957605363
+SHA1: b8d6c90fb8b31d0527cb0cf3b51fd4f688e777c8
+MD5sum: f545e95c8761f44dd3f2bfff74250c9d
 Description: Backup Archiving Recovery Open Sourced - common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -99,20 +99,20 @@ Description: Backup Archiving Recovery Open Sourced - common files
 
 Package: bareos-contrib-tools
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 122
+Installed-Size: 123
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
 Depends: python-bareos, bareos-filedaemon
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-contrib-tools_22.0.3-buster_amd64.deb
-Size: 34416
-SHA256: cb59a04dcf85af1a3d5959b089f044e82b2eaada6e8b7855def127dabf5aa202
-SHA1: 56b7b7c029c4b665fe963031bd1c46c41530280a
-MD5sum: 1ecb688a2ba4d29548607bc53384c514
+Filename: pool/main/b/bareos/bareos-contrib-tools_22.1.0-buster_amd64.deb
+Size: 35088
+SHA256: c6d6baac17431c074c31ef5263ae088614d29a1df8ce83901a769079ed10ecd7
+SHA1: 2077948dc6a9c005db48a1566298950fe404b16b
+MD5sum: de5137a25c192909ae9e19a995a9f4c6
 Description: Backup Archiving Recovery Open Sourced - contributed tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -121,20 +121,20 @@ Description: Backup Archiving Recovery Open Sourced - contributed tools
 
 Package: bareos-database-common
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 358
+Installed-Size: 359
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 22.0.3-buster), bareos-database-postgresql (= 22.0.3-buster), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
+Depends: bareos-common (= 22.1.0-buster), bareos-database-postgresql (= 22.1.0-buster), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-common_22.0.3-buster_amd64.deb
-Size: 103960
-SHA256: e2d154c13a4e21a8377fe794b8935fc9d13eab86ef5a16d34d914617b8bd704c
-SHA1: 9ac38eb4969a6e3e4725861de721616b9d5073aa
-MD5sum: 5d17925955a763c430f0ed54ca16c9cd
+Filename: pool/main/b/bareos/bareos-database-common_22.1.0-buster_amd64.deb
+Size: 104772
+SHA256: fdd87b87ab06bd8762aa4aeffccea29e8e8aaa7334df485c0a1a153160a805ec
+SHA1: 761ecb117d5f77ba6978f2f024c5719f530ec7d6
+MD5sum: a0e93338b2b58235fd727feec180ec90
 Description: Backup Archiving Recovery Open Sourced - common catalog files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -144,21 +144,21 @@ Description: Backup Archiving Recovery Open Sourced - common catalog files
 
 Package: bareos-database-postgresql
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 307
+Installed-Size: 305
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
 Depends: dbconfig-pgsql | dbconfig-no-thanks, lsb-base (>= 3.2-13), postgresql-client, bareos-common, bareos-database-common, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libpq5, libstdc++6 (>= 5)
 Suggests: postgresql
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-postgresql_22.0.3-buster_amd64.deb
-Size: 59044
-SHA256: cd160004c9f1831d8a8dfacdf43a33dd7003997069d6a9f348e6342c2e435bb2
-SHA1: e17f88bf77a9058e40dba196b9b334e125f8c1f0
-MD5sum: 8c7852c2d1b016be1a6299dce8d33e6a
+Filename: pool/main/b/bareos/bareos-database-postgresql_22.1.0-buster_amd64.deb
+Size: 59580
+SHA256: 46ca4f33d0ff3243b449b98ca7b6e9bea8e1f0d0309107090a52999538a7b7f9
+SHA1: 1af83e01da334a5b64b9414305c5fa39c7bb6a49
+MD5sum: 3cd02f29d807f659ccf9d196a5e7d55a
 Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -168,21 +168,21 @@ Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
 
 Package: bareos-database-tools
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 1009
+Installed-Size: 1010
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 22.0.3-buster), bareos-database-common (= 22.0.3-buster), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), bareos-database-common (= 22.1.0-buster), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
 Conflicts: bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-tools_22.0.3-buster_amd64.deb
-Size: 241692
-SHA256: 7f77ae75e7a945c41333e16790a9dc8288ce1c977a500b80b40731420c832789
-SHA1: 30896e6f37be0013c507084f25d9b6d961fb7033
-MD5sum: 595866cc10d8754e9d25c7da9d126c86
+Filename: pool/main/b/bareos/bareos-database-tools_22.1.0-buster_amd64.deb
+Size: 242804
+SHA256: 3a91a440b67cf35f0a7932811a9e86e96a7a12887cc25b468b5c5b3a5f030494
+SHA1: 47eef3535278770f12d748b50043b9a84775ca37
+MD5sum: 0dc19dd96e185febe02fc7dff59c58f3
 Description: Backup Archiving Recovery Open Sourced - database tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -191,23 +191,23 @@ Description: Backup Archiving Recovery Open Sourced - database tools
 
 Package: bareos-director
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 1529
+Installed-Size: 1534
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 22.0.3-buster), bareos-database-common (= 22.0.3-buster), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), bareos-database-common (= 22.1.0-buster), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
 Recommends: logrotate
 Conflicts: bacula-director
 Replaces: bacula-director
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-director_22.0.3-buster_amd64.deb
-Size: 504524
-SHA256: 6a2213f160d29055e7d7212bdae57132e349db679a429c5f1d59710602ad3d13
-SHA1: ea4fbfbeda0086352d76ce5d7b8905aa1be4c417
-MD5sum: 75a81306e0c1a8900e8968c32af1c113
+Filename: pool/main/b/bareos/bareos-director_22.1.0-buster_amd64.deb
+Size: 506220
+SHA256: 1f079b2f7fb84d3c3e2b88a2bdf040301028143e2a4c2ab4b2e82c647d1e67c3
+SHA1: 0fbcb6c4741ea795cc68a9fb64f00f9d629e610b
+MD5sum: d11d5237f2b691c1efed01f8f3dd66a7
 Description: Backup Archiving Recovery Open Sourced - director daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -267,22 +267,22 @@ Description: Backup Archiving Recovery Open Sourced - director Python plugin
 
 Package: bareos-filedaemon
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 693
+Installed-Size: 694
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 22.0.3-buster), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Depends: bareos-common (= 22.1.0-buster), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
 Conflicts: bacula-fd
 Replaces: bacula-fd, bareos-universal-client
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-filedaemon_22.0.3-buster_amd64.deb
-Size: 223164
-SHA256: 4280e731f8fb52fa448a7035e6585c93827bada6d3b48dda32dfa88f861f8d6a
-SHA1: 4eedfaf0c7c4552bacf38dc2d96a558fc9ebfe02
-MD5sum: 125abc21ca5891c3d89d3d7ffb642a64
+Filename: pool/main/b/bareos/bareos-filedaemon_22.1.0-buster_amd64.deb
+Size: 224404
+SHA256: e339c27c116c3c4af3aa2729d50954394f89e950e61d7bb7f999320c678ad3f9
+SHA1: b5bf491b79774065d5a3d1f6b47ffe442bcc0413
+MD5sum: 6f0d6904af304a86887a5c5a392c8038
 Description: Backup Archiving Recovery Open Sourced - file daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -457,12 +457,12 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin
 
 Package: bareos-storage
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 683
+Installed-Size: 684
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 22.0.3-buster), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
 Recommends: bareos-tools
 Conflicts: bacula-sd
 Breaks: bareos-storage-tape (<< 14.2.6~)
@@ -470,11 +470,11 @@ Replaces: bacula-sd
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage_22.0.3-buster_amd64.deb
-Size: 212592
-SHA256: e1b59bdf1a8b9e04575d466498704e2fb8a4ed5368b894b3cf6a0fdd5d032de1
-SHA1: b68ffb3cc78318880c452d647ff8d59ab825a931
-MD5sum: 4d9cfa57a971f85c4c00109d69e3a045
+Filename: pool/main/b/bareos/bareos-storage_22.1.0-buster_amd64.deb
+Size: 213456
+SHA256: c185802d01ec47ac7d15cf4559d3222f36a83136d7519a9680e8425aee03d8bb
+SHA1: a865b66241638614e27274a8b5c57a7c72e09352
+MD5sum: 26c22ee5096956fe3443da86e01817ef
 Description: Backup Archiving Recovery Open Sourced - storage daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -488,20 +488,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon
 
 Package: bareos-storage-droplet
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 487
+Installed-Size: 488
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-storage (= 22.0.3-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjson-c3 (>= 0.10), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5), libxml2 (>= 2.7.4)
+Depends: bareos-storage (= 22.1.0-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjson-c3 (>= 0.10), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5), libxml2 (>= 2.7.4)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-droplet_22.0.3-buster_amd64.deb
-Size: 160264
-SHA256: 008f5f00d0974b32a1643a60bc1f3d92a4ff655f0791309b1957c59ebc6e0424
-SHA1: bb8b21f0c29baac92ee7e06fb9801d2a82ddef5e
-MD5sum: 3ae59033bb181d5a7ac546e83d3511d4
+Filename: pool/main/b/bareos/bareos-storage-droplet_22.1.0-buster_amd64.deb
+Size: 160612
+SHA256: 1f7c2af941a79767e5f503df15990e3f11be31e2403945359f42915513b02f64
+SHA1: fb96166ef824b14f109da1c6742dfaf7fa63ac3f
+MD5sum: b9e838ab709cef0ac7c159a9733dd6c8
 Description: Backup Archiving Recovery Open Sourced - storage daemon droplet backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -510,20 +510,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon droplet bac
 
 Package: bareos-storage-fifo
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 141
+Installed-Size: 142
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 22.0.3-buster), bareos-storage (= 22.0.3-buster), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
+Depends: bareos-common (= 22.1.0-buster), bareos-storage (= 22.1.0-buster), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-fifo_22.0.3-buster_amd64.deb
-Size: 38568
-SHA256: a7e102b94cb30aab38ebec90ade06dccb4ac984f9d50ec96958853a268f40354
-SHA1: 5801ee1a79dfd33212281873206e5c8cbe6c851a
-MD5sum: 3d4b7939adbf7cd1a896fa7994525406
+Filename: pool/main/b/bareos/bareos-storage-fifo_22.1.0-buster_amd64.deb
+Size: 39268
+SHA256: 263a01583f721eba01042c7dc5a2e246468c1402d820754f0f6d49516df16235
+SHA1: 16aa2c87e063a2ac5c69ff5a64960b3367f82aa3
+MD5sum: 1d2ee29a70a6e81f9e3a1d0f49d9ab7b
 Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -581,12 +581,12 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon Python plug
 
 Package: bareos-storage-tape
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 627
+Installed-Size: 628
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 22.0.3-buster), bareos-storage (= 22.0.3-buster), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), bareos-storage (= 22.1.0-buster), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
 Recommends: mt-st
 Suggests: scsitools, sg3-utils
 Breaks: bareos-storage (<< 14.2.6~)
@@ -594,11 +594,11 @@ Replaces: bareos-storage (<< 14.2.6~)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-tape_22.0.3-buster_amd64.deb
-Size: 191024
-SHA256: e20fb29fe40349ea88ba9276da42da0b00d14f88b01cde414d5a963350971d71
-SHA1: 575bff8d461a7d1418d86f45a260be71344ffa77
-MD5sum: 93b7992dbf73e512f7b8fe2fa6dd8c8f
+Filename: pool/main/b/bareos/bareos-storage-tape_22.1.0-buster_amd64.deb
+Size: 191728
+SHA256: 31b1f6e94b568ab3ce5b8f4af775a1befd5612c45fc76b3cbbc98f7abaa262c0
+SHA1: 420b862bdab8a9e52bf7a417b452b72cc6e728e3
+MD5sum: 1c6be5d640552dd3fdcf5d1373a8e964
 Description: Backup Archiving Recovery Open Sourced - storage daemon tape support
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -614,21 +614,21 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon tape suppor
 
 Package: bareos-tools
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 2825
+Installed-Size: 2830
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 22.0.3-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 22.1.0-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
 Conflicts: bacula-sd, bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-tools_22.0.3-buster_amd64.deb
-Size: 337612
-SHA256: fad32ff788bfa83b7a6d74e7fd27d25b1b1ffea66d75f406666d71e483273a3c
-SHA1: 91b2a1d1d20babfae7f1a7a424e0452d24688b0c
-MD5sum: 14a310a4af72c4d7376621f24dbf35f0
+Filename: pool/main/b/bareos/bareos-tools_22.1.0-buster_amd64.deb
+Size: 337748
+SHA256: af0291375f7844f686ae28c9683bd44b954c5016e24d16b8ec0a9893289cbf88
+SHA1: 4e596dfbe83ce32b793c91c537c334eed953e05c
+MD5sum: c01e45742ecec3c925bd9b76c70c3b44
 Description: Backup Archiving Recovery Open Sourced - common tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -638,22 +638,22 @@ Description: Backup Archiving Recovery Open Sourced - common tools
 
 Package: bareos-traymonitor
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 561
-Depends: bareos-common (= 22.0.3-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libqt5core5a (>= 5.11.0~rc1), libqt5gui5 (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2)
+Installed-Size: 562
+Depends: bareos-common (= 22.1.0-buster), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libjansson4 (>= 2.0.1), libqt5core5a (>= 5.11.0~rc1), libqt5gui5 (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2)
 Suggests: kde | gnome-desktop-environment
 Conflicts: bacula-traymonitor
 Replaces: bacula-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-traymonitor_22.0.3-buster_amd64.deb
-Size: 182480
-SHA256: 255b86b269124d09768de35cf6346f076809998773fb70a64f369b795e61fa51
-SHA1: 6e647b3032557e88ce7dd09d42ca9589cb9dc8c6
-MD5sum: 75eb94e04de85b6c588d5f77101d9432
+Filename: pool/main/b/bareos/bareos-traymonitor_22.1.0-buster_amd64.deb
+Size: 183248
+SHA256: b07b0870c482726616e9a62afde789e20647f4bc075b1761b01cdfa8b7d3954f
+SHA1: 9f7ba14e14afaf8819f1b8adb761312a032e52bd
+MD5sum: d89900594b9903106846cb77686d7bd3
 Description: Backup Archiving Recovery Open Sourced - tray monitor
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -666,19 +666,19 @@ Description: Backup Archiving Recovery Open Sourced - tray monitor
 
 Package: bareos-webui
 Source: bareos
-Version: 22.0.3-buster
+Version: 22.1.0-buster
 Architecture: all
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 22954
+Installed-Size: 22957
 Depends: apache2 | httpd, libapache2-mod-fcgid, php-fpm (>= 7.0), php-date, php-intl, php-json, php-curl
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-webui_22.0.3-buster_all.deb
-Size: 4102860
-SHA256: 759767dd3c9cb354549133f2f3751e33952b842e63be336e967612a47c36fb12
-SHA1: b4d77877c3e6ceb4eda2204ffc7bbef466179694
-MD5sum: 1ee2210b132269a53e384f5807ba5897
+Filename: pool/main/b/bareos/bareos-webui_22.1.0-buster_all.deb
+Size: 4103668
+SHA256: 93862bf20ae28761b7cc919a05fcc9fec7500494d7760708570dbdf44f95f4b1
+SHA1: b75486b232bd201a6f041157d21e2bb0e70f58dc
+MD5sum: fe93c1711b91d5f6e0db668527a4bc06
 Description: Backup Archiving Recovery Open Sourced - webui
  This package contains the Bareos WebUI.
 
