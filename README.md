@@ -1,12 +1,20 @@
-# bacula-fork-deb-build
-Custom debian build of the unnamed bacula fork
+# Bacula Fork Debian Repository
+Debian build of the `unnamed` bacula (as its name is a registered trademark) fork.
 
-## Supports:
+## Currently supported debian versions:
+ * stretch (only old and outdated version)
  * buster
  * bullseye
  * bookworm
 
-## Add Repo:
+## How to add this repository:
+
+### Automatically via script
+```
+wget -O- https://greensec.github.io/bacula-fork-deb-build/add-repository.sh | bash
+```
+
+### Manually
 ```
 apt-get install software-properties-common wget lsb-release ca-certificates
 wget -O /usr/share/keyrings/greensec.github.io-bacula-fork.key https://greensec.github.io/bacula-fork-deb-build/public.key
