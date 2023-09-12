@@ -1,0 +1,36 @@
+fix gcc6 optional method.
+Index: bareos/core/src/lib/crypto.h
+===================================================================
+--- bareos.orig/core/src/lib/crypto.h	2023-01-12 20:12:37.015955006 +0100
++++ bareos/core/src/lib/crypto.h	2023-01-12 20:16:42.353701970 +0100
+@@ -28,7 +28,7 @@
+ #ifndef BAREOS_LIB_CRYPTO_H_
+ #define BAREOS_LIB_CRYPTO_H_
+ 
+-#include <optional>
++#include <experimental/optional>
+ #include <string>
+ 
+ template <typename T> class alist;
+@@ -192,7 +192,7 @@
+ crypto_digest_t CryptoDigestStreamType(int stream);
+ const char* crypto_strerror(crypto_error_t error);
+ 
+-std::optional<std::string> compute_hash(const std::string& unhashed,
++std::experimental::optional<std::string> compute_hash(const std::string& unhashed,
+                                         const std::string& digestname
+                                         = "SHA256");
+ 
+Index: bareos/core/src/lib/crypto_openssl.cc
+===================================================================
+--- bareos.orig/core/src/lib/crypto_openssl.cc	2023-01-12 20:17:24.122847350 +0100
++++ bareos/core/src/lib/crypto_openssl.cc	2023-01-12 20:17:50.295526462 +0100
+@@ -1466,7 +1466,7 @@
+   return crypto_digest_name(digest->type);
+ }
+ 
+-std::optional<std::string> compute_hash(const std::string& unhashed,
++std::experimental::optional<std::string> compute_hash(const std::string& unhashed,
+                                         const std::string& digestname)
+ {
+   std::stringstream result;

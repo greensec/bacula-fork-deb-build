@@ -9,13 +9,13 @@ on:
         type: choice
         description: 'Debian/Ubuntu Version'
         options:
+          - 'bookworm'
           - 'bullseye'
           - 'buster'
-          - 'stretch'
         required: true
       version_tag:
         description: 'Version Tag'
-        default: '21.1.2'
+        default: '22.1.0'
         required: true
 jobs:
   build:
@@ -51,7 +51,7 @@ jobs:
         with:
           files: ./*.deb
       - name: Github pages APT repo
-        uses: smeinecke/apt-repo-action@v2.1.0
+        uses: smeinecke/apt-repo-action@v2.1.2
         with:
           github_token: ${{ secrets.GH_PAT }}
           repo_supported_arch: amd64
@@ -59,6 +59,7 @@ jobs:
             stretch
             buster
             bullseye
+            bookworm
           file: |
             *.deb
           file_target_version: "${{ github.event.inputs.flavor }}"
