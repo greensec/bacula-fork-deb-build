@@ -16,7 +16,7 @@ wget -O- https://greensec.github.io/bacula-fork-deb-build/add-repository.sh | ba
 
 ### Manually
 ```
-apt-get install software-properties-common wget lsb-release ca-certificates
+apt-get install wget lsb-release ca-certificates
 wget -O /usr/share/keyrings/greensec.github.io-bacula-fork.key https://greensec.github.io/bacula-fork-deb-build/public.key
-apt-add-repository "deb [signed-by=/usr/share/keyrings/greensec.github.io-bacula-fork.key arch=amd64] https://greensec.github.io/bacula-fork-deb-build/repo $(lsb_release -sc) main"
+echo "deb [signed-by=/usr/share/keyrings/greensec.github.io-bacula-fork.key arch=amd64] https://greensec.github.io/bacula-fork-deb-build/repo $(lsb_release -sc) main" > /etc/apt/sources.list.d/bacula-fork-deb-build.list
 ```
