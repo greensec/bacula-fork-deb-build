@@ -24,5 +24,6 @@ RUN set -e \
     && apt-get update \
     && apt-get install -y git git-buildpackage cmake \
     && apt-get build-dep -y bareos \
+    && apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*

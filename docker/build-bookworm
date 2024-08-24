@@ -16,11 +16,12 @@ RUN	set -e \
 
 # install package deps
 RUN set -e \
-    && echo "deb-src http://deb.debian.org/debian bullseye main" >/etc/apt/sources.list.d/bullseye-source.list \
-    && echo "deb http://http.debian.net/debian bullseye-backports main" >/etc/apt/sources.list.d/bullseye-backports.list \
+    && echo "deb-src http://deb.debian.org/debian bookworm main" >/etc/apt/sources.list.d/bookworm-source.list \
+    && echo "deb http://http.debian.net/debian bookworm-backports main" >/etc/apt/sources.list.d/bookworm-backports.list \
     && wget -O- http://download.bareos.org/current/Debian_12/add_bareos_repositories.sh | bash \
     && apt-get update \
     && apt-get install -y git git-buildpackage cmake \
     && apt-get build-dep -y bareos \
+    && apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
