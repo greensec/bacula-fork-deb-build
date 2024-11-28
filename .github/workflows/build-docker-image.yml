@@ -10,8 +10,8 @@ on:
         options:
           - 'bookworm'
           - 'bullseye'
-          - 'buster'
-          - 'stretch'
+          # - 'buster'
+          # - 'stretch'
         required: true
 
 jobs:

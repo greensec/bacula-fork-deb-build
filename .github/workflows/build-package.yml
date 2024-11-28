@@ -11,7 +11,7 @@ on:
         options:
           - 'bookworm'
           - 'bullseye'
-          - 'buster'
+          # - 'buster'
         required: true
       version_tag:
         description: 'Version Tag'

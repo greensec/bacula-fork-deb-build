@@ -3,7 +3,7 @@ Debian build of the `unnamed` bacula (as its name is a registered trademark) for
 
 ## Currently supported debian versions:
  * stretch (only old and outdated version)
- * buster
+ * buster (only old and outdated version)
  * bullseye
  * bookworm
 

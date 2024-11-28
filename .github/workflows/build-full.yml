@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os-version: ["buster", "bullseye", "bookworm"]
+        os-version: ["bullseye", "bookworm"]
     container:
       image: "greensec/bacula-fork-custom-build:${{ matrix.os-version }}"
       options: --privileged --device /dev/fuse
@@ -62,21 +62,21 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-      - name: Add buster release
-        uses: smeinecke/apt-repo-action@v2.1.2
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
-          repo_supported_version: |
-            stretch
-            buster
-            bullseye
-            bookworm
-          file: |
-            *-buster_*.deb
-          file_target_version: buster
-          private_key: ${{ secrets.APT_SIGNING_KEY }}
-          key_passphrase: ""
+      # - name: Add buster release
+      #   uses: smeinecke/apt-repo-action@v2.1.2
+      #   with:
+      #     github_token: ${{ secrets.GH_PAT }}
+      #     repo_supported_arch: amd64
+      #     repo_supported_version: |
+      #       stretch
+      #       buster
+      #       bullseye
+      #       bookworm
+      #     file: |
+      #       *-buster_*.deb
+      #     file_target_version: buster
+      #     private_key: ${{ secrets.APT_SIGNING_KEY }}
+      #     key_passphrase: ""
       - name: Add bullseye release
         uses: smeinecke/apt-repo-action@v2.1.2
         with:
