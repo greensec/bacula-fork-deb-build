@@ -1,17 +1,17 @@
 Package: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 110
-Depends: bareos-director (= 23.0.3-bookworm), bareos-storage (= 23.0.3-bookworm), bareos-client (= 23.0.3-bookworm)
+Installed-Size: 114
+Depends: bareos-director (= 23.1.0-bookworm), bareos-storage (= 23.1.0-bookworm), bareos-client (= 23.1.0-bookworm)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos_23.0.3-bookworm_amd64.deb
-Size: 29784
-SHA256: bd86ea848953af4e81be4b86e8582ee4e8d80ba41f7a872eaa9dda5a6e0bf96d
-SHA1: dac7dc1e87708b36248a5f183d55d8c7b836e25f
-MD5sum: 5b7922e2b2fb6c839c610993ebb71657
+Filename: pool/main/b/bareos/bareos_23.1.0-bookworm_amd64.deb
+Size: 31272
+SHA256: 3c0a2033e04ffea9c5259f11e9b95c09dc0eac6b9017a8c874fbd3733086ea04
+SHA1: a85ba1eeb4cc88aebdb0ad77f421ba3c9f0a6a2d
+MD5sum: 0d5214cdc6d3cff763d5d965245f25bf
 Description: Backup Archiving Recovery Open Sourced - metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -26,22 +26,22 @@ Description: Backup Archiving Recovery Open Sourced - metapackage
 
 Package: bareos-bconsole
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 674
+Installed-Size: 678
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libreadline8 (>= 6.0), libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libreadline8 (>= 6.0), libstdc++6 (>= 11)
 Conflicts: bacula-console
 Replaces: bacula-console
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-bconsole_23.0.3-bookworm_amd64.deb
-Size: 122216
-SHA256: 97db306f4b6f4c7495f2562b08b2b8abd98ca28bc9fae4325622d41038e60a43
-SHA1: db18867a5f5ce97041282dfc92f08d42065b1d65
-MD5sum: a288559e8c9527480a6150fa0b7b7d4b
+Filename: pool/main/b/bareos/bareos-bconsole_23.1.0-bookworm_amd64.deb
+Size: 123612
+SHA256: a86566babde4f7f191b1b39cbb53dcd4801f9330c89a0c1a5b4e6eb6ed47a070
+SHA1: ba1dde6f7e2b69eb2084434c214bdda13c92eecf
+MD5sum: ffa56cce5e0db99c597972a291e83cec
 Description: Backup Archiving Recovery Open Sourced - text console
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -53,20 +53,20 @@ Description: Backup Archiving Recovery Open Sourced - text console
 
 Package: bareos-client
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 110
-Depends: bareos-bconsole (>= 23.0.3-bookworm), bareos-filedaemon (>= 23.0.3-bookworm)
+Installed-Size: 114
+Depends: bareos-bconsole (>= 23.1.0-bookworm), bareos-filedaemon (>= 23.1.0-bookworm)
 Suggests: bareos-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-client_23.0.3-bookworm_amd64.deb
-Size: 29624
-SHA256: c9412efe6a9b550bc73a0a4fe6b4d89a48a9ce6b55d1ca25c4ff1f7bbe2734ab
-SHA1: 178126d54ee26be4323adee7a67132b987990430
-MD5sum: 8a467cb1bb01611437fa4ac07a8d581e
+Filename: pool/main/b/bareos/bareos-client_23.1.0-bookworm_amd64.deb
+Size: 31112
+SHA256: 1f796fa5758a1d85c2a901c1a7eb6ea015a533ec6caedabd653d80a96fc9648a
+SHA1: ff0f41db50c2ee695da24f0405c405822526a2fd
+MD5sum: 34f82c51641982ec17e84d22cd517cd1
 Description: Backup Archiving Recovery Open Sourced - client metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -76,21 +76,21 @@ Description: Backup Archiving Recovery Open Sourced - client metapackage
 
 Package: bareos-common
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 3342
+Installed-Size: 3366
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser, coreutils, findutils, grep, gawk, libc-bin, passwd, openssl, sed
 Depends: libacl1 (>= 2.2.23), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), liblzo2-2 (>= 2.02), libssl3 (>= 3.0.0), libstdc++6 (>= 11), libtirpc3 (>= 1.0.2), zlib1g (>= 1:1.2.0)
 Conflicts: bacula-common, bacula-director-common
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-common_23.0.3-bookworm_amd64.deb
-Size: 992404
-SHA256: 2ef17ca323faed6ef88a7f2efae729c42a7d23d60206dd62002a43842f656850
-SHA1: 1c8f181f576811e5a27d87f8455c6670dc2f946e
-MD5sum: fbbd80bebc51a6a7b8741d5f825d8e0b
+Filename: pool/main/b/bareos/bareos-common_23.1.0-bookworm_amd64.deb
+Size: 999752
+SHA256: 40d3c41516ba71c7822bd06eb7cdb2bb30f6912657a9320ca5da9ce483da60a3
+SHA1: 18f1d78479114f247d25ae1f35f4bb6605c404c0
+MD5sum: 2cf5484686ba19e86dc44bb5a1e22d02
 Description: Backup Archiving Recovery Open Sourced - common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -99,20 +99,20 @@ Description: Backup Archiving Recovery Open Sourced - common files
 
 Package: bareos-contrib-tools
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 137
+Installed-Size: 141
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: python-bareos, bareos-filedaemon
+Depends: python3-bareos, bareos-filedaemon
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-contrib-tools_23.0.3-bookworm_amd64.deb
-Size: 35640
-SHA256: cbc8c2785b17939a5a12222fd09f2b25be76f78dd8d253eb2143eda7d322316f
-SHA1: c108c368b355b194594e2df23dc1a690b99637e3
-MD5sum: f38d313ba6c1d9101f0af4921be94e68
+Filename: pool/main/b/bareos/bareos-contrib-tools_23.1.0-bookworm_amd64.deb
+Size: 37108
+SHA256: 88cc22a4fdeca7f30d76713e03d438a737094e4006440666d0ab6856fddcef36
+SHA1: 830a3d9ac625cf7474fb2fa1148f690a43e785f2
+MD5sum: 09415127cdc4be83787d4b3bef1b2938
 Description: Backup Archiving Recovery Open Sourced - contributed tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -121,20 +121,20 @@ Description: Backup Archiving Recovery Open Sourced - contributed tools
 
 Package: bareos-database-common
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 401
+Installed-Size: 405
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bookworm), bareos-database-postgresql (= 23.0.3-bookworm), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-database-postgresql (= 23.1.0-bookworm), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 11)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-common_23.0.3-bookworm_amd64.deb
-Size: 114512
-SHA256: 5726c971b81180b68af7bc480874695e72eafcdeed71c06f8f4264fdb29544fe
-SHA1: f17494f4c22f0b8287ec9b3f94203be0ecb05a56
-MD5sum: cd2e3c56d52cac561ab7846c8b59787a
+Filename: pool/main/b/bareos/bareos-database-common_23.1.0-bookworm_amd64.deb
+Size: 116056
+SHA256: f5983dd0d189226af363d5f5458b9bf181fafa5c32b659942b350fa7e10fde5f
+SHA1: fbc06c10eca9912329fd77cb38e35118af76e1ee
+MD5sum: 400d85a1b81f3f14b0d3b2eead1ba3ea
 Description: Backup Archiving Recovery Open Sourced - common catalog files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -144,21 +144,21 @@ Description: Backup Archiving Recovery Open Sourced - common catalog files
 
 Package: bareos-database-postgresql
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 265
+Installed-Size: 269
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
 Depends: dbconfig-pgsql | dbconfig-no-thanks, lsb-base (>= 3.2-13), postgresql-client
 Suggests: postgresql
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-postgresql_23.0.3-bookworm_amd64.deb
-Size: 39112
-SHA256: ee8f831c97639e3e7eaac0086fe168999ef3a1bec9d702108dff0a380bfed49e
-SHA1: 6c739de2b7c844517e3a38853da2ee8be16b8ab3
-MD5sum: 81aaf5ebf24889116a5b97b7e060dc0d
+Filename: pool/main/b/bareos/bareos-database-postgresql_23.1.0-bookworm_amd64.deb
+Size: 40624
+SHA256: a18601532adcfa5286159f6382e7be7db6fe6cf118f5cf16326d89e55a9f1c0f
+SHA1: 2afdafc3aff5564092822694175ea00d1181653e
+MD5sum: f8595c6fc1e1dcc3595ecfaf24e77a2f
 Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -168,21 +168,21 @@ Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
 
 Package: bareos-database-tools
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 864
+Installed-Size: 876
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bookworm), bareos-database-common (= 23.0.3-bookworm), lsb-base (>= 3.2-13), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-database-common (= 23.1.0-bookworm), lsb-base (>= 3.2-13), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 11)
 Conflicts: bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-tools_23.0.3-bookworm_amd64.deb
-Size: 221684
-SHA256: f4c43126eaa81b719523be421792883e5968235d7d9ecc3d28b547d29dfd5fa5
-SHA1: 39d928eec697f3bf9de0d69e20a4642846260eb8
-MD5sum: 8dea9f4f0ceb11def08aa4438007602d
+Filename: pool/main/b/bareos/bareos-database-tools_23.1.0-bookworm_amd64.deb
+Size: 226076
+SHA256: 3f72b34a204540bc5339723525b2a4af838277313dee791e60b0ed47a2a80ddd
+SHA1: 8061defd58c61ba377f5e3fbf492d46a404e2186
+MD5sum: 43d386b0007d62c00b2dea93f01a8eeb
 Description: Backup Archiving Recovery Open Sourced - database tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -191,23 +191,23 @@ Description: Backup Archiving Recovery Open Sourced - database tools
 
 Package: bareos-director
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 1542
+Installed-Size: 1562
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bookworm), bareos-database-common (= 23.0.3-bookworm), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-database-common (= 23.1.0-bookworm), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 11)
 Recommends: logrotate
 Conflicts: bacula-director
 Replaces: bacula-director
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-director_23.0.3-bookworm_amd64.deb
-Size: 497284
-SHA256: 82cced399b25d57467183ff330785f71ac93c1477f407f238426c699cdeec5c9
-SHA1: 00c6d59e488ba0a1a0fe616b658471d8679a36b0
-MD5sum: 821f07641c071c109d8112c5a2ceaa09
+Filename: pool/main/b/bareos/bareos-director_23.1.0-bookworm_amd64.deb
+Size: 502776
+SHA256: 19de33397c86e70262b53580e7cb597f9eac3eb2a12ba4389e94f9f754bd488f
+SHA1: 9752d6a00befd4ea33244fe199cfba2bbf2502d4
+MD5sum: a2c9af5a076f4c97f8646f28a3aafa3a
 Description: Backup Archiving Recovery Open Sourced - director daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -220,22 +220,22 @@ Description: Backup Archiving Recovery Open Sourced - director daemon
 
 Package: bareos-filedaemon
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 685
+Installed-Size: 701
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bookworm), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4)
+Depends: bareos-common (= 23.1.0-bookworm), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4)
 Conflicts: bacula-fd
 Replaces: bacula-fd, bareos-universal-client
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-filedaemon_23.0.3-bookworm_amd64.deb
-Size: 221368
-SHA256: 6662fe3215bc6519081c3ee3d58327713ee1d8b8b69c28569f903083663da13c
-SHA1: d267aca066c85e1db1c2c7ea9d0f9fe71b4d3472
-MD5sum: 23f4f16aa6f3ecc8eaa09b24ac9e4598
+Filename: pool/main/b/bareos/bareos-filedaemon_23.1.0-bookworm_amd64.deb
+Size: 224592
+SHA256: dc3527277f7bb7ba06cb10ee0a09bfd8eb2ca019f460a16e98fb631d7b41ac9f
+SHA1: 8df3de64558ec745dc424b35998a60aeb1a05606
+MD5sum: c79e93a35ed1c9cbec7b91ffb85842a2
 Description: Backup Archiving Recovery Open Sourced - file daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -248,12 +248,12 @@ Description: Backup Archiving Recovery Open Sourced - file daemon
 
 Package: bareos-storage
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 634
+Installed-Size: 617
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bookworm), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 12)
+Depends: bareos-common (= 23.1.0-bookworm), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 12)
 Recommends: bareos-tools
 Conflicts: bacula-sd
 Breaks: bareos-storage-tape (<< 14.2.6~)
@@ -261,11 +261,11 @@ Replaces: bacula-sd
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage_23.0.3-bookworm_amd64.deb
-Size: 195300
-SHA256: 87dc0058db153c40ad6d7afa51885c78dad845e8e15be8d758790bed34abb559
-SHA1: be057678c62d31bbeb3d3f6411cbe6b159863b53
-MD5sum: 5ca1f1a81e302825b0ec293923cf9f18
+Filename: pool/main/b/bareos/bareos-storage_23.1.0-bookworm_amd64.deb
+Size: 191220
+SHA256: a1af1c24ce34a79e8a0db24b440e56ac533e0fb26572b8168e1d2693eb1def74
+SHA1: d243a885a37912e0ec5bc06f3ac459b555e2099c
+MD5sum: a6e1973a1a181ef2e785bf64065319ec
 Description: Backup Archiving Recovery Open Sourced - storage daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -277,22 +277,46 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon
  It runs on the machine which has access to the backup device(s) - usually
  a tape drive, but alternatively other storage media, such as files.
 
-Package: bareos-storage-droplet
+Package: bareos-storage-dedupable
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 497
+Installed-Size: 272
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-storage (= 23.0.3-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjson-c5 (>= 0.15), libssl3 (>= 3.0.0), libstdc++6 (>= 11), libxml2 (>= 2.7.4)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-storage (= 23.1.0-bookworm), lsb-base (>= 3.2-13), libc6 (>= 2.33), libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-droplet_23.0.3-bookworm_amd64.deb
-Size: 161008
-SHA256: bad4820857744090a48ce2067c1563cb282e8ba0665141be115db97b003e5a98
-SHA1: 5d15ba95a7a1ed621556724e015197e8ef8c6da3
-MD5sum: ac02fc25c21840659dfad895936d2450
+Filename: pool/main/b/bareos/bareos-storage-dedupable_23.1.0-bookworm_amd64.deb
+Size: 81832
+SHA256: 228e7de499af47ebddb2b4a3df2599307164475a1e502ac19cd46d10c4d8bf23
+SHA1: 07df8ddf798d999b8a8671108d23cb2db8c56b8f
+MD5sum: a6df40c8959996ee0407e5154e787a02
+Description: Backup Archiving Recovery Open Sourced - storage daemon DEDUPABLE backend
+ Bareos is a set of programs to manage backup, recovery and verification of
+ data across a network of computers of different kinds.
+ .
+ This package contains the Storage backend for DEDUPABLE files.
+ This package is only required, when a resource "Archive Device = dedup"
+ should be used by the Bareos Storage Daemon.
+
+Package: bareos-storage-droplet
+Source: bareos
+Version: 23.1.0-bookworm
+Architecture: amd64
+Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
+Installed-Size: 501
+Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
+Depends: bareos-storage (= 23.1.0-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjson-c5 (>= 0.15), libssl3 (>= 3.0.0), libstdc++6 (>= 11), libxml2 (>= 2.7.4)
+Homepage: http://www.bareos.org/
+Priority: optional
+Section: admin
+Filename: pool/main/b/bareos/bareos-storage-droplet_23.1.0-bookworm_amd64.deb
+Size: 162224
+SHA256: 766db098fa0d6afde2c55c539088d757592eef8b0950d09aad7d547522c131e9
+SHA1: bc39b56616a854939f004af460b986fb1891b6aa
+MD5sum: c879d7e9114386631041b50d8ebf99da
 Description: Backup Archiving Recovery Open Sourced - storage daemon droplet backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -301,20 +325,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon droplet bac
 
 Package: bareos-storage-fifo
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 155
+Installed-Size: 159
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bookworm), bareos-storage (= 23.0.3-bookworm), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-storage (= 23.1.0-bookworm), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-fifo_23.0.3-bookworm_amd64.deb
-Size: 39748
-SHA256: 805b8ffce67ebed993dd1c7edcbe14bcc42b760614f90caaf25edb8a67653948
-SHA1: 07d149778c99cc698e912475afa57171b0a3a995
-MD5sum: 8c3adaaabcbc11678f147046ba67cc93
+Filename: pool/main/b/bareos/bareos-storage-fifo_23.1.0-bookworm_amd64.deb
+Size: 41272
+SHA256: ba0e3f65ac406c72cf133ef249a0f72793fb1ea7093f060e44235d5c0d064f54
+SHA1: ed45ecb3a818c230725ab42d14b7c5823ff57055
+MD5sum: 8148ea15ae5960b2c2cd7d727c7079b3
 Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -325,12 +349,12 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backen
 
 Package: bareos-storage-tape
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 569
+Installed-Size: 866
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bookworm), bareos-storage (= 23.0.3-bookworm), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
+Depends: bareos-common (= 23.1.0-bookworm), bareos-storage (= 23.1.0-bookworm), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
 Recommends: mt-st
 Suggests: scsitools, sg3-utils
 Breaks: bareos-storage (<< 14.2.6~)
@@ -338,11 +362,11 @@ Replaces: bareos-storage (<< 14.2.6~)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-tape_23.0.3-bookworm_amd64.deb
-Size: 166992
-SHA256: 4bdee5ca6f75169b1ae8d2ee104d1c44a3d6507e309cb364ef88562ba806d7ec
-SHA1: 9e82d1021c1d709430665b65014dad4e02a4fa15
-MD5sum: 5edaf3173885ea9228be828be3197b22
+Filename: pool/main/b/bareos/bareos-storage-tape_23.1.0-bookworm_amd64.deb
+Size: 234380
+SHA256: bfb022b05c1dba2cea4468eddf9863cb2afa640d3b570ad848454d54918016ff
+SHA1: 8e762083a7c10a45e34805df678b81400eae8da0
+MD5sum: 90de2d5144061dee2b91feb2bbd3431f
 Description: Backup Archiving Recovery Open Sourced - storage daemon tape support
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -358,21 +382,21 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon tape suppor
 
 Package: bareos-tools
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 2684
+Installed-Size: 2704
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4)
+Depends: bareos-common (= 23.1.0-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libssl3 (>= 3.0.0), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4)
 Conflicts: bacula-sd, bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-tools_23.0.3-bookworm_amd64.deb
-Size: 460744
-SHA256: 346cc0a4d4f8b7cff8232017da841a30f4489570f6894fb7b42e411007e9552d
-SHA1: 028e31a427fbd15e58d49599cf185dd5f6bbd5bc
-MD5sum: 5cb0e3436db3f29cdd7c5dee76656c34
+Filename: pool/main/b/bareos/bareos-tools_23.1.0-bookworm_amd64.deb
+Size: 466276
+SHA256: fbb764c59b82b8debe23efe7ac8ad7e8f294b5e0b9d5f7736a24ebeff343ffae
+SHA1: 1b1bab47c47dc1021824383605527f841b32442f
+MD5sum: 51f8bae4cd8095cceb89589f0a86cda4
 Description: Backup Archiving Recovery Open Sourced - common tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -382,22 +406,22 @@ Description: Backup Archiving Recovery Open Sourced - common tools
 
 Package: bareos-traymonitor
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 572
-Depends: bareos-common (= 23.0.3-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libqt5core5a (>= 5.15.1), libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 11)
+Installed-Size: 581
+Depends: bareos-common (= 23.1.0-bookworm), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libqt6core6 (>= 6.4.0), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 11)
 Suggests: kde | gnome-desktop-environment
 Conflicts: bacula-traymonitor
 Replaces: bacula-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-traymonitor_23.0.3-bookworm_amd64.deb
-Size: 185108
-SHA256: 4a281ac964e1934d273e648d6d5c75907773b6bdfc743c8aad13167808d64642
-SHA1: eda9a007be8cae776ffc3c811666ade2fcbd2037
-MD5sum: 4ac8db74c357e1ac26df61d35df07359
+Filename: pool/main/b/bareos/bareos-traymonitor_23.1.0-bookworm_amd64.deb
+Size: 187728
+SHA256: 98ab3e6d22694fc2c5161ec3086365672aeb016a0637b72ab9dd431a1f810f7c
+SHA1: 8b1972482660521f286fc93a138493861d1972bb
+MD5sum: 51f8409c7d8afb2dbe4fa645c176c687
 Description: Backup Archiving Recovery Open Sourced - tray monitor
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -410,19 +434,19 @@ Description: Backup Archiving Recovery Open Sourced - tray monitor
 
 Package: bareos-webui
 Source: bareos
-Version: 23.0.3-bookworm
+Version: 23.1.0-bookworm
 Architecture: all
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 23066
+Installed-Size: 23067
 Depends: apache2 | httpd, php-fpm (>= 7.0), php-date, php-intl, php-json, php-curl
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-webui_23.0.3-bookworm_all.deb
-Size: 4089952
-SHA256: 7b60ef0c30af134d789dc832f1dad7273b512365a6239970ab69d2001968b6bb
-SHA1: d8075a044b4c9c1188175a2924fdf69b1021bc47
-MD5sum: 83066a74ee8d3d43d8bbca0441b7538b
+Filename: pool/main/b/bareos/bareos-webui_23.1.0-bookworm_all.deb
+Size: 4089376
+SHA256: d687687ee0ee04c870b78d951713ec2819806394565c083a18f3c29644f2ef41
+SHA1: e84fe3026d6342a6140816dc342abb96dbd4a6bd
+MD5sum: 79d67de33ed07fc496aa36ef1ce3a042
 Description: Backup Archiving Recovery Open Sourced - webui
  This package contains the Bareos WebUI.
 
