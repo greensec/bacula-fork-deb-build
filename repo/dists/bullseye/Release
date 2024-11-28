@@ -1,17 +1,17 @@
 Codename: bullseye
-Date: Thu, 28 Nov 2024 02:48:13 UTC
+Date: Thu, 28 Nov 2024 03:00:46 UTC
 Architectures: amd64
 Components: main
 Description: greensec/bacula-fork-deb-build
 MD5Sum:
- c5dc89b12bc0fed22b001791d0abc408 29808 main/binary-amd64/Packages
- 166dee646721c0fa047e5410ed81599b 6003 main/binary-amd64/Packages.gz
+ 505f26af8e88d7e7b2235286921e3bd9 30877 main/binary-amd64/Packages
+ 16aa0872f4f7a6082bc66db41c353ff9 6171 main/binary-amd64/Packages.gz
  c8a7ecec259dd151e51787e177ff1422 80 main/binary-amd64/Release
 SHA1:
- a3042684571597cb5d8fc864979b079e5da670bd 29808 main/binary-amd64/Packages
- b32afd5f29f0bb2d3a3209c941b60d9ae34b592f 6003 main/binary-amd64/Packages.gz
+ b86ac6b6c9ca55e37719f46d6de69ba750582195 30877 main/binary-amd64/Packages
+ 94cca62f140b5b6151e313c709bec1d6f3d76802 6171 main/binary-amd64/Packages.gz
  6ecbe32ac4e26453096e4d1b31561813d8ef7052 80 main/binary-amd64/Release
 SHA256:
- baa82074252df598e5c0f7ce1b6b2e3ae61b2296ae4df7bcd79862a99e170617 29808 main/binary-amd64/Packages
- cd86f8199ef65042b558c9584650e0e925671ad7286fbe679471451e5d55a12c 6003 main/binary-amd64/Packages.gz
+ bc80920558e420474c9f50bd12b2c15f70342ce50b10ed546f1c80281b8dba20 30877 main/binary-amd64/Packages
+ b18aba218a083db736104a12cf740f3d2d3624fefcf09225eb116f46c2900090 6171 main/binary-amd64/Packages.gz
  084ef64666deb6f4717d923bb0fb38510ac8b1d20eb1446fe10b003809be8b75 80 main/binary-amd64/Release

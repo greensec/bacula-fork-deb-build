@@ -1,17 +1,17 @@
 Package: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 110
-Depends: bareos-director (= 23.0.3-bullseye), bareos-storage (= 23.0.3-bullseye), bareos-client (= 23.0.3-bullseye)
+Installed-Size: 114
+Depends: bareos-director (= 23.1.0-bullseye), bareos-storage (= 23.1.0-bullseye), bareos-client (= 23.1.0-bullseye)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos_23.0.3-bullseye_amd64.deb
-Size: 29788
-SHA256: 239bbfaf04677e72d23dac04fac4416a03ac2bec4f642c4192b48aafcb6a1f28
-SHA1: 46984bfc9faf6acd04fba0044b4aac7c8e744c10
-MD5sum: 54a1b875b2f4c6216a7ec146dd3f68b7
+Filename: pool/main/b/bareos/bareos_23.1.0-bullseye_amd64.deb
+Size: 31280
+SHA256: 232c72d55bd1f362899fe1b80b5c47cd36c4f83ee538af71338af63a1a88caaa
+SHA1: f9a26d94912c5957969f5036064c1ea3951486ba
+MD5sum: 7b2f0de847bebc554a3e68e727ea308d
 Description: Backup Archiving Recovery Open Sourced - metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -26,22 +26,22 @@ Description: Backup Archiving Recovery Open Sourced - metapackage
 
 Package: bareos-bconsole
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 690
+Installed-Size: 694
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libreadline8 (>= 6.0), libstdc++6 (>= 9)
+Depends: bareos-common (= 23.1.0-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libreadline8 (>= 6.0), libstdc++6 (>= 9)
 Conflicts: bacula-console
 Replaces: bacula-console
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-bconsole_23.0.3-bullseye_amd64.deb
-Size: 124368
-SHA256: 38053d95a95d60416781b1cdb560f58cf8838181fd812778f167855b4705fbbe
-SHA1: 9206d48024d1f5f4795914a22ad5ae7e8f5e1280
-MD5sum: c8885bb111a38481c50e54f5de8813bb
+Filename: pool/main/b/bareos/bareos-bconsole_23.1.0-bullseye_amd64.deb
+Size: 125808
+SHA256: 47b3f97c06f3368809c39159c2d503b0d3ae4d1d118c9d6a23317f87d91258bb
+SHA1: 3cd013730397c7c305dd2b6363a756fcde93b065
+MD5sum: 875654b9ef43ad9e42a3d44677495ffd
 Description: Backup Archiving Recovery Open Sourced - text console
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -53,20 +53,20 @@ Description: Backup Archiving Recovery Open Sourced - text console
 
 Package: bareos-client
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 110
-Depends: bareos-bconsole (>= 23.0.3-bullseye), bareos-filedaemon (>= 23.0.3-bullseye)
+Installed-Size: 114
+Depends: bareos-bconsole (>= 23.1.0-bullseye), bareos-filedaemon (>= 23.1.0-bullseye)
 Suggests: bareos-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-client_23.0.3-bullseye_amd64.deb
-Size: 29604
-SHA256: ab145bf4d66440d17382e41e866b1ace707fee43edb2906e37f950269574b670
-SHA1: cdf8fb8c95b0bb156da265a74f27a3bc3961320f
-MD5sum: 0f914dbcdbc234cff108ed9ac145b4a7
+Filename: pool/main/b/bareos/bareos-client_23.1.0-bullseye_amd64.deb
+Size: 31104
+SHA256: ad365fc02ab0ec0c9fc82b7cfe8efbda4640d28e5b37e70510e7ebc4f139cbc1
+SHA1: e65812473d6fe37360a31344805ac28955602ca1
+MD5sum: 72c4d81b4cd1c2683aebb8fae5012bdc
 Description: Backup Archiving Recovery Open Sourced - client metapackage
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -76,21 +76,21 @@ Description: Backup Archiving Recovery Open Sourced - client metapackage
 
 Package: bareos-common
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 3390
+Installed-Size: 3426
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser, coreutils, findutils, grep, gawk, libc-bin, passwd, openssl, sed
 Depends: libacl1 (>= 2.2.23), libc6 (>= 2.30), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), liblzo2-2 (>= 2.02), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9), libtirpc3 (>= 1.0.2), zlib1g (>= 1:1.2.0)
 Conflicts: bacula-common, bacula-director-common
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-common_23.0.3-bullseye_amd64.deb
-Size: 992048
-SHA256: 5c466253b58e00712fa5ef861135204419c9bf55d23ffef5273b18ed7a1ae637
-SHA1: 6aca43e65748b78a79d747b010195dc86622557a
-MD5sum: 3e9376bf7e20ca9f80c55aad9a2e57fc
+Filename: pool/main/b/bareos/bareos-common_23.1.0-bullseye_amd64.deb
+Size: 999216
+SHA256: 6be03b55e2eafcc576ac3bcd2cbb3b8ce808485c352aabe6b728b64cf9427275
+SHA1: 440d39f394481b1d704a8f6b4b74868c5e0c1a19
+MD5sum: b4ebbe9261260cfac1c57a43f2785ece
 Description: Backup Archiving Recovery Open Sourced - common files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -99,20 +99,20 @@ Description: Backup Archiving Recovery Open Sourced - common files
 
 Package: bareos-contrib-tools
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 137
+Installed-Size: 141
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: python-bareos, bareos-filedaemon
+Depends: python3-bareos, bareos-filedaemon
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-contrib-tools_23.0.3-bullseye_amd64.deb
-Size: 35632
-SHA256: 5928c5f39146d58fb0042d2dc9d1c9f86c88928d5c14c84c566775c90f15b3e8
-SHA1: 6e89aedcfb8e5e9bfa58058b3988fe205e88c5e3
-MD5sum: ba9e79ce9dd5836e49b67555e2efc422
+Filename: pool/main/b/bareos/bareos-contrib-tools_23.1.0-bullseye_amd64.deb
+Size: 37104
+SHA256: fb095ca4a9b4e1cfcf845ed178e4d3267f41b9c1790e5fb92ce80769bd7c8737
+SHA1: 9637a693e4e307990ac285a97d8c386fc664b32c
+MD5sum: 282dda14df22bf10a7e7cc8c4acb9b33
 Description: Backup Archiving Recovery Open Sourced - contributed tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -121,20 +121,20 @@ Description: Backup Archiving Recovery Open Sourced - contributed tools
 
 Package: bareos-database-common
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 401
+Installed-Size: 405
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bullseye), bareos-database-postgresql (= 23.0.3-bullseye), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 5.2)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-database-postgresql (= 23.1.0-bullseye), dbconfig-common, lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 5.2)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-common_23.0.3-bullseye_amd64.deb
-Size: 113748
-SHA256: eb184187d42253dac5e57b3cdcb0009784925e43fba4199e61f73ab7cb3d0d66
-SHA1: 53ce9d2321492587bff1811ce3e167b42935da46
-MD5sum: 1f61f28e0ef859984ad95d7af28bdb63
+Filename: pool/main/b/bareos/bareos-database-common_23.1.0-bullseye_amd64.deb
+Size: 115280
+SHA256: abc3f0bbb7e66215b3c8e7680f4157ea1ed990c4e4c0dbd0551924bf7e266f59
+SHA1: b8dd268ff27ce18f3ff38fd0bee90b72a6243244
+MD5sum: 595ae5345a321367a34720b1f4a46ec5
 Description: Backup Archiving Recovery Open Sourced - common catalog files
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -144,21 +144,21 @@ Description: Backup Archiving Recovery Open Sourced - common catalog files
 
 Package: bareos-database-postgresql
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 265
+Installed-Size: 269
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
 Depends: dbconfig-pgsql | dbconfig-no-thanks, lsb-base (>= 3.2-13), postgresql-client
 Suggests: postgresql
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-postgresql_23.0.3-bullseye_amd64.deb
-Size: 39124
-SHA256: 9890403bd8527e91f3f823eb0e8b9b1f1cf7de4f0d2eae081c1140c6d2c26a64
-SHA1: 61b7c9a6e109c8e93a4f101578f635c70e34eba8
-MD5sum: 27c653c6341ea74a6994a37a23e9f46f
+Filename: pool/main/b/bareos/bareos-database-postgresql_23.1.0-bullseye_amd64.deb
+Size: 40632
+SHA256: 4b22a405bdd5c24447384b4c2e48b257ca41b0aceac8fcda68907004fe2f19b7
+SHA1: 39f397d4d7031526ab05ca9544a1f20bd1a3a4d1
+MD5sum: d918593d7b5ca2ab93a0d9f5faecca39
 Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -168,21 +168,21 @@ Description: Backup Archiving Recovery Open Sourced - PostgreSQL backend
 
 Package: bareos-database-tools
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 880
+Installed-Size: 892
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bullseye), bareos-database-common (= 23.0.3-bullseye), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-database-common (= 23.1.0-bullseye), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9)
 Conflicts: bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-database-tools_23.0.3-bullseye_amd64.deb
-Size: 224280
-SHA256: bc2b62e153fbd59c1314407567144c30cc2d58bd440c8de6b04ee7140df198bb
-SHA1: a9ab3b33fe233c59a34824372b2f334cc1cf9f38
-MD5sum: a6acbe901d74fbc5095da4081859d426
+Filename: pool/main/b/bareos/bareos-database-tools_23.1.0-bullseye_amd64.deb
+Size: 227600
+SHA256: 6cbda60686e1df4dc91af88136e99f29dbc78e6cc56e742e660862789b13296b
+SHA1: 8d17bc9648a8c69fdf562a879a0fcac5464c10fd
+MD5sum: 523cd66c53fd108a742ef7eddd01a23e
 Description: Backup Archiving Recovery Open Sourced - database tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -191,23 +191,23 @@ Description: Backup Archiving Recovery Open Sourced - database tools
 
 Package: bareos-director
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 1550
+Installed-Size: 1570
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bullseye), bareos-database-common (= 23.0.3-bullseye), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.30), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-database-common (= 23.1.0-bullseye), bareos-database-tools, lsb-base (>= 3.2-13), lsof, bsd-mailx | mailx, libc6 (>= 2.30), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9)
 Recommends: logrotate
 Conflicts: bacula-director
 Replaces: bacula-director
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-director_23.0.3-bullseye_amd64.deb
-Size: 495488
-SHA256: efa6862800b76f590edf0c82527f0dc29d23bfd89dec2421d92c98744825d957
-SHA1: 852e65ae8df48c095828e1b0cc47c4fd552e9789
-MD5sum: 63846aba805551080ab1d8c3108cfcb0
+Filename: pool/main/b/bareos/bareos-director_23.1.0-bullseye_amd64.deb
+Size: 500820
+SHA256: e561cca572ae3c2ab3df1c3531b166b65e664a659593fb024b1d134abc85cc60
+SHA1: bcb70f947f0b078e3e9e0ba5b3821a4b4d37dea9
+MD5sum: 3fbb611a0964ca434b06e354a905e2ba
 Description: Backup Archiving Recovery Open Sourced - director daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -267,22 +267,22 @@ Description: Backup Archiving Recovery Open Sourced - director Python plugin
 
 Package: bareos-filedaemon
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 697
+Installed-Size: 705
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bullseye), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 9), zlib1g (>= 1:1.1.4)
+Depends: bareos-common (= 23.1.0-bullseye), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libstdc++6 (>= 9), zlib1g (>= 1:1.1.4)
 Conflicts: bacula-fd
 Replaces: bacula-fd, bareos-universal-client
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-filedaemon_23.0.3-bullseye_amd64.deb
-Size: 222048
-SHA256: 123da3e55700b5698344160ac650fd6e653b2b13166742fc942b37f3bc1dac73
-SHA1: b9ba51794c8939b9d2914ad6e67f7bb5745d98d5
-MD5sum: 63f15f8130960498dd2210757f968abb
+Filename: pool/main/b/bareos/bareos-filedaemon_23.1.0-bullseye_amd64.deb
+Size: 225084
+SHA256: f2c5a652a8ca2ee1c4d21403ac141f4a322dda2148754cefc5e08e220c51fcda
+SHA1: e3cee7344cdadfdef59b54d7145eefef004fe2eb
+MD5sum: d705dc36feb2f85b75fc6ed71d4f676f
 Description: Backup Archiving Recovery Open Sourced - file daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -457,12 +457,12 @@ Description: Backup Archiving Recovery Open Sourced - file daemon Python plugin
 
 Package: bareos-storage
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 642
+Installed-Size: 629
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bullseye), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 9)
+Depends: bareos-common (= 23.1.0-bullseye), lsb-base (>= 3.2-13), lsof, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 9)
 Recommends: bareos-tools
 Conflicts: bacula-sd
 Breaks: bareos-storage-tape (<< 14.2.6~)
@@ -470,11 +470,11 @@ Replaces: bacula-sd
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage_23.0.3-bullseye_amd64.deb
-Size: 196168
-SHA256: 3175d8fd9c22c6126f6b44f43f477401b8639f31cb1a6f9b3a393d284227b072
-SHA1: 5ac59435ea77a55aa809ca0fd87036fa89809bd1
-MD5sum: d399a3691ee2425f9f95791b6b0dff82
+Filename: pool/main/b/bareos/bareos-storage_23.1.0-bullseye_amd64.deb
+Size: 192200
+SHA256: f2a08a5326a149515ba120b8f7eab0242e4e0b5cf9447e0de14f2d903323589a
+SHA1: fe0130b4ef4696cde8b1d84520988a884dbbcfce
+MD5sum: 08ab81dc61cf923e77b8b2f4d98444a4
 Description: Backup Archiving Recovery Open Sourced - storage daemon
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -486,22 +486,46 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon
  It runs on the machine which has access to the backup device(s) - usually
  a tape drive, but alternatively other storage media, such as files.
 
-Package: bareos-storage-droplet
+Package: bareos-storage-dedupable
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 493
+Installed-Size: 268
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-storage (= 23.0.3-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjson-c5 (>= 0.15), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), libxml2 (>= 2.7.4)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-storage (= 23.1.0-bullseye), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 9)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-droplet_23.0.3-bullseye_amd64.deb
-Size: 159648
-SHA256: 3d803999d569e75247b026999f28f1ddbe6134554bed5b7c48d431354bc5ec86
-SHA1: 918c9aa48e1e124803b53d38b665b0f57521cb3b
-MD5sum: 283fdbc0c659161c58b3e755ca0decdc
+Filename: pool/main/b/bareos/bareos-storage-dedupable_23.1.0-bullseye_amd64.deb
+Size: 79924
+SHA256: a290dcf4136078d9728853a526f1ad165db86da8e740a217ca8d10383b4b6af4
+SHA1: 4fb8c373501f7513f4c90d7eee2094be8901cae5
+MD5sum: c12fa7698b25de5a7efa6130f92b73eb
+Description: Backup Archiving Recovery Open Sourced - storage daemon DEDUPABLE backend
+ Bareos is a set of programs to manage backup, recovery and verification of
+ data across a network of computers of different kinds.
+ .
+ This package contains the Storage backend for DEDUPABLE files.
+ This package is only required, when a resource "Archive Device = dedup"
+ should be used by the Bareos Storage Daemon.
+
+Package: bareos-storage-droplet
+Source: bareos
+Version: 23.1.0-bullseye
+Architecture: amd64
+Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
+Installed-Size: 497
+Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
+Depends: bareos-storage (= 23.1.0-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjson-c5 (>= 0.15), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), libxml2 (>= 2.7.4)
+Homepage: http://www.bareos.org/
+Priority: optional
+Section: admin
+Filename: pool/main/b/bareos/bareos-storage-droplet_23.1.0-bullseye_amd64.deb
+Size: 161488
+SHA256: b2a6d2a99bfda27e1b3dddfc27efaaa0deed894cbb66b69db3a99c42d5d70937
+SHA1: 58e1c28349b0c76eec0816d61e1dc0aa28994457
+MD5sum: 4f0d9e40285357378c80e28f2844b09e
 Description: Backup Archiving Recovery Open Sourced - storage daemon droplet backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -510,20 +534,20 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon droplet bac
 
 Package: bareos-storage-fifo
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 155
+Installed-Size: 159
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bullseye), bareos-storage (= 23.0.3-bullseye), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-storage (= 23.1.0-bullseye), lsb-base (>= 3.2-13), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-fifo_23.0.3-bullseye_amd64.deb
-Size: 39424
-SHA256: 8aeadc6dcc4c1c85c8bdc3c2cfed8107f1986df699d75f07a779e60d407ac14d
-SHA1: 84a73a59f6f5fdcfb75db2dbd43e7f6387e3d02c
-MD5sum: 5a4a527fd577d576930ccc19f7fff3c8
+Filename: pool/main/b/bareos/bareos-storage-fifo_23.1.0-bullseye_amd64.deb
+Size: 40948
+SHA256: 118feef25491ab7c66cca00ebb0b4f423161ef7f938f5c93e153acc00d35c498
+SHA1: 0cf0b9805e10793dc7a1c89d0f80487ad68343dc
+MD5sum: 2431f1e34c9bb25a3054d8b9325d481a
 Description: Backup Archiving Recovery Open Sourced - storage daemon FIFO backend
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -581,12 +605,12 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon Python plug
 
 Package: bareos-storage-tape
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 577
+Installed-Size: 886
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0, adduser
-Depends: bareos-common (= 23.0.3-bullseye), bareos-storage (= 23.0.3-bullseye), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 9)
+Depends: bareos-common (= 23.1.0-bullseye), bareos-storage (= 23.1.0-bullseye), lsb-base (>= 3.2-13), mtx, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 9)
 Recommends: mt-st
 Suggests: scsitools, sg3-utils
 Breaks: bareos-storage (<< 14.2.6~)
@@ -594,11 +618,11 @@ Replaces: bareos-storage (<< 14.2.6~)
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-storage-tape_23.0.3-bullseye_amd64.deb
-Size: 169460
-SHA256: f79c2acf9e21d218c976a0c4955503221adcee787b831f9ee5555115204c67a2
-SHA1: e740c2595c4bc3b573f69f98358e4d1f1953fb22
-MD5sum: ae36296913cc75b9ccf5f0d13204d54c
+Filename: pool/main/b/bareos/bareos-storage-tape_23.1.0-bullseye_amd64.deb
+Size: 241392
+SHA256: 94dc4536dd55b903044015cf1c2a0e23e90b387429f4c26a08bb897c78a98594
+SHA1: e9932c989f8c4857109c6cc11f833ead5ec59ea2
+MD5sum: edff41dcdab4f933b8597bb58ade8018
 Description: Backup Archiving Recovery Open Sourced - storage daemon tape support
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -614,21 +638,21 @@ Description: Backup Archiving Recovery Open Sourced - storage daemon tape suppor
 
 Package: bareos-tools
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 2804
+Installed-Size: 2824
 Pre-Depends: debconf (>= 1.4.30) | debconf-2.0
-Depends: bareos-common (= 23.0.3-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9), zlib1g (>= 1:1.1.4)
+Depends: bareos-common (= 23.1.0-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9), zlib1g (>= 1:1.1.4)
 Conflicts: bacula-sd, bacula-sd-mysql, bacula-sd-pgsql, bacula-sd-sqlite3
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-tools_23.0.3-bullseye_amd64.deb
-Size: 470188
-SHA256: 54ac495319f12bf777e9c1eafb4c54891464f4bded0b16cc1546d635e30acd53
-SHA1: 38bca20c917abf824975d456e281d1ce5a9b5a22
-MD5sum: 7ab797d37e1bcb3df1622d68cf1357b8
+Filename: pool/main/b/bareos/bareos-tools_23.1.0-bullseye_amd64.deb
+Size: 475224
+SHA256: 3d2f25cb1984e07a8dc79980da837828df131d1f74493e8f2fd3e2cb06d93058
+SHA1: f1af94e86856205ed23af29b8efda62d478e67f0
+MD5sum: 0efbf4adfcdc93b2a2e48517c063d6f4
 Description: Backup Archiving Recovery Open Sourced - common tools
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -638,22 +662,22 @@ Description: Backup Archiving Recovery Open Sourced - common tools
 
 Package: bareos-traymonitor
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: amd64
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 580
-Depends: bareos-common (= 23.0.3-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libqt5core5a (>= 5.15.1), libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 9)
+Installed-Size: 593
+Depends: bareos-common (= 23.1.0-bullseye), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjansson4 (>= 2.0.1), libqt6core6 (>= 6.4.0), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 9)
 Suggests: kde | gnome-desktop-environment
 Conflicts: bacula-traymonitor
 Replaces: bacula-traymonitor
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-traymonitor_23.0.3-bullseye_amd64.deb
-Size: 186840
-SHA256: cc3af897e8ec1075ba7df5842fc625dc99bc7878837e51ca90c291262e34fe8d
-SHA1: c25630c715575f85d70f6433cf2c6d569c2ba066
-MD5sum: 3af5ee490e67c75c9ee75f702e73594b
+Filename: pool/main/b/bareos/bareos-traymonitor_23.1.0-bullseye_amd64.deb
+Size: 190952
+SHA256: da6a18208d1e9d2cb7639c3fda469c0fa05a05de29b9d903d22344c00c98b118
+SHA1: 8a30d4b35b87a1a925f5f3f07b28661e0375f07a
+MD5sum: 6bb8b0a1d10899f714486ad3f8b36269
 Description: Backup Archiving Recovery Open Sourced - tray monitor
  Bareos is a set of programs to manage backup, recovery and verification of
  data across a network of computers of different kinds.
@@ -666,19 +690,19 @@ Description: Backup Archiving Recovery Open Sourced - tray monitor
 
 Package: bareos-webui
 Source: bareos
-Version: 23.0.3-bullseye
+Version: 23.1.0-bullseye
 Architecture: all
 Maintainer: Joerg Steffens <joerg.steffens@bareos.com>
-Installed-Size: 23066
+Installed-Size: 23067
 Depends: apache2 | httpd, php-fpm (>= 7.0), php-date, php-intl, php-json, php-curl
 Homepage: http://www.bareos.org/
 Priority: optional
 Section: admin
-Filename: pool/main/b/bareos/bareos-webui_23.0.3-bullseye_all.deb
-Size: 4089388
-SHA256: 92441f7f62fbc723b75aaf41c63904f3ba311013cf4ed2d2688d6c34e775323a
-SHA1: 4f712b85d21a91784dc37015390a89a4346faffb
-MD5sum: b91705a870d7b2ae4fda038d7f99214f
+Filename: pool/main/b/bareos/bareos-webui_23.1.0-bullseye_all.deb
+Size: 4089988
+SHA256: 90189903a88d9108113dd030001b3435a8aac31c9a988f36e988c88bf5b178ad
+SHA1: 2b647b7a18b421086085ce87d447e74a39cf9afd
+MD5sum: 99ce1a26007e7f3ffc9964ad66e334b9
 Description: Backup Archiving Recovery Open Sourced - webui
  This package contains the Bareos WebUI.
 
