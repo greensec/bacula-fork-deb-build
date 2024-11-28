@@ -5,7 +5,7 @@ on:
     inputs:
       version_tag:
         description: 'Version Tag'
-        default: '23.0.3'
+        default: '23.1.0'
         required: true
   create:
     tags:
