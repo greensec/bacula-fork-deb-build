@@ -10,6 +10,7 @@ on:
   create:
     tags:
       - '*'
+
 jobs:
   build:
     name: Build packages
@@ -18,8 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         os-version: ["bullseye", "bookworm"]
+        arch: ["amd64", "arm64"]
     container:
-      image: "greensec/bacula-fork-custom-build:${{ matrix.os-version }}"
+      image: "ghcr.io/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
@@ -35,26 +37,35 @@ jobs:
         with:
           path: |
             cache
-          key: "${{ matrix.os-version }}-build-cache-${{ env.VERSION_TAG }}"
+          key: "${{ matrix.os-version }}-build-cache-"
           restore-keys: |
             "${{ matrix.os-version }}-build-cache-"
       - name: Run build script
         run: ./scripts/build.sh
         env:
           DEB_FLAVOR: "${{ matrix.os-version }}"
+          DEB_HOST_ARCH: "${{ matrix.arch }}"
       - name: Upload deb files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: packages
+          name: "packages-${{ matrix.os-version }}-${{ matrix.arch }}"
           path: ./*.deb
+
+  merge-artefacts:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: debian-packages
+        uses: actions/upload-artifact/merge@v4
+
   add_release:
     name: Add package to release
-    needs: build
+    needs: merge-artefacts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
-          name: packages
+          name: merged-artifacts
       - name: Display structure of downloaded files
         run: ls -R
       - name: Release
@@ -62,48 +73,33 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ./*.deb
-      # - name: Add buster release
-      #   uses: smeinecke/apt-repo-action@v2.1.2
-      #   with:
-      #     github_token: ${{ secrets.GH_PAT }}
-      #     repo_supported_arch: amd64
-      #     repo_supported_version: |
-      #       stretch
-      #       buster
-      #       bullseye
-      #       bookworm
-      #     file: |
-      #       *-buster_*.deb
-      #     file_target_version: buster
-      #     private_key: ${{ secrets.APT_SIGNING_KEY }}
-      #     key_passphrase: ""
-      - name: Add bullseye release
-        uses: smeinecke/apt-repo-action@v2.1.2
+
+  add_repo:
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      max-parallel: 1
+      matrix:
+        os-version: ["bullseye", "bookworm"]
+        arch: ["amd64", "arm64"]
+    steps:
+      - uses: actions/download-artifact@v4
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
+          name: "packages-${{ matrix.os-version }}"
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Add ${{ matrix.os-version }} release
+        uses: smeinecke/apt-repo-action@v2.1.4
+        with:
+          github_token: ${{ github.token }}
+          repo_supported_arch: |
+            amd64
+            arm64
           repo_supported_version: |
-            stretch
-            buster
             bullseye
             bookworm
           file: |
-            *-bullseye_*.deb
-          file_target_version: bullseye
-          private_key: ${{ secrets.APT_SIGNING_KEY }}
-          key_passphrase: ""
-      - name: Add bookworm release
-        uses: smeinecke/apt-repo-action@v2.1.2
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
-          repo_supported_version: |
-            stretch
-            buster
-            bullseye
-            bookworm
-          file: |
-            *-bookworm_*.deb
-          file_target_version: bookworm
+            *-${{ matrix.os-version }}*.deb
+          file_target_version: ${{ matrix.os-version }}
           private_key: ${{ secrets.APT_SIGNING_KEY }}
           key_passphrase: ""
