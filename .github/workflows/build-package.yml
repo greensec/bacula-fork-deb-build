@@ -11,6 +11,7 @@ on:
         options:
           - 'bookworm'
           - 'bullseye'
+          - 'buster'
         required: true
       arch:
         type: choice
