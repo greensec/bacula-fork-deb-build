@@ -21,7 +21,7 @@ jobs:
         os-version: ["bullseye", "bookworm"]
         arch: ["amd64", "arm64"]
     container:
-      image: "ghcr.io/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}"
+      image: "ghcr.io/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}-${{ matrix.arch }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
