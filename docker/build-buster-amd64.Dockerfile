@@ -10,7 +10,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # default dependencies
 RUN	set -e \
     && apt-get update \
-    && apt-get install -y --no-install-recommends wget ca-certificates gnupg quilt ccache distcc gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu libc6-dev-arm64-cross \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends wget ca-certificates gnupg quilt ccache distcc  \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
@@ -23,9 +23,9 @@ RUN set -e \
     && echo "deb-src http://download.bareos.org/current/Debian_11 /" >> /etc/apt/sources.list.d/bareos.list \
     && wget -O- https://download.bareos.org/current/Debian_11/Release.key | apt-key add - \
     && apt-get update \
-    && apt-get install -y git git-buildpackage librados-dev \
-    && apt-get install -y -t buster-backports cmake libarchive13 \
-    && apt-get build-dep -y bareos \
-    && apt-get build-dep -y python-bareos \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y git git-buildpackage librados-dev \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y -t buster-backports cmake libarchive13 \
+    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y bareos \
+    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*

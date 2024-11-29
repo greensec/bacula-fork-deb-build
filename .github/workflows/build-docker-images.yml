@@ -14,6 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         os-version: ["buster", "bullseye", "bookworm"]
+        arch: ["amd64", "arm64"]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -30,6 +31,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: "{{defaultContext}}:docker"
-          file: "build-${{ matrix.os-version }}"
+          file: "build-${{ matrix.os-version }}-${{ matrix.arch }}.Dockerfile"
           push: true
-          tags: "${{ env.REGISTRY }}/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}"
+          tags: "${{ env.REGISTRY }}/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}-${{ matrix.arch }}"
