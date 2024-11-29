@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os-version: ["buster", "bullseye", "bookworm"]
+        os-version: ["bullseye", "bookworm"]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
