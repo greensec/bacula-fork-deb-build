@@ -28,6 +28,6 @@ RUN set -e \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y git git-buildpackage librados-dev \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y -t buster-backports cmake libarchive13 \
     && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y --host-architecture arm64 bareos \
-    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y --host-architecture arm64 python-bareos \
+    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*

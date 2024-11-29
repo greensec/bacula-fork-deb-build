@@ -24,6 +24,6 @@ RUN set -e \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y git git-buildpackage cmake \
     && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y --host-architecture arm64 bareos \
-    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y --host-architecture arm64 python-bareos \
+    && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y python-bareos \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
