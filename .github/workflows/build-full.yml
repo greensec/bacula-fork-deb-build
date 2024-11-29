@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os-version: ["bullseye", "bookworm"]
+        os-version: ["buster", "bullseye", "bookworm"]
         arch: ["amd64", "arm64"]
     container:
       image: "ghcr.io/${{ github.repository_owner }}/bacula-fork-custom-build:${{ matrix.os-version }}-${{ matrix.arch }}"
@@ -80,7 +80,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        os-version: ["bullseye", "bookworm"]
+        os-version: ["buster", "bullseye", "bookworm"]
         arch: ["amd64", "arm64"]
     steps:
       - uses: actions/download-artifact@v4
@@ -96,6 +96,7 @@ jobs:
             amd64
             arm64
           repo_supported_version: |
+            buster
             bullseye
             bookworm
           file: |
