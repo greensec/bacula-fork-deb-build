@@ -11,7 +11,13 @@ on:
         options:
           - 'bookworm'
           - 'bullseye'
-          # - 'buster'
+        required: true
+      arch:
+        type: choice
+        description: 'Architecture'
+        options:
+          - 'amd64'
+          - 'arm64'
         required: true
       version_tag:
         description: 'Version Tag'
@@ -26,7 +32,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: "greensec/bacula-fork-custom-build:${{ github.event.inputs.flavor }}"
+      image: "ghcr.io/${{ github.repository_owner }}/bacula-fork-custom-build:${{ github.event.inputs.flavor }}"
       options: --privileged --device /dev/fuse
     steps:
       - name: Checkout code
@@ -36,30 +42,36 @@ jobs:
         with:
           path: |
             cache
-          key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.version_tag }}"
+          key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
           restore-keys: |
-            "${{ github.event.inputs.flavor }}-build-cache-"
+            "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
       - name: Run build script
         run: ./scripts/build.sh
         env:
           DEB_FLAVOR: "${{ github.event.inputs.flavor }}"
           VERSION_TAG: "${{ github.event.inputs.version_tag }}"
+          DEB_HOST_ARCH: "${{ github.event.inputs.arch }}"
+
       - name: Upload deb files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: packages
           path: ./*.deb
+
       - name: Release
         uses: softprops/action-gh-release@v1
         if: (startsWith(github.ref, 'refs/tags/') && github.event.inputs.release == true)
         with:
           files: ./*.deb
+
       - name: Github pages APT repo
-        uses: smeinecke/apt-repo-action@v2.1.2
+        uses: smeinecke/apt-repo-action@v2.1.4
         if: github.event.inputs.release == true
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          repo_supported_arch: amd64
+          github_token: ${{ github.token }}
+          repo_supported_arch: |
+            amd64
+            arm64
           repo_supported_version: |
             stretch
             buster

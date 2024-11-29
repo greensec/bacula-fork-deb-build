@@ -37,9 +37,9 @@ jobs:
         with:
           path: |
             cache
-          key: "${{ matrix.os-version }}-build-cache-"
+          key: "${{ matrix.os-version }}-build-cache-${{ matrix.arch }}"
           restore-keys: |
-            "${{ matrix.os-version }}-build-cache-"
+            "${{ matrix.os-version }}-build-cache-${{ matrix.arch }}"
       - name: Run build script
         run: ./scripts/build.sh
         env:
