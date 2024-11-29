@@ -37,14 +37,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Cache build
-        uses: actions/cache@v3
-        with:
-          path: |
-            cache
-          key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
-          restore-keys: |
-            "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
+      # - name: Cache build
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: |
+      #       cache
+      #     key: "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
+      #     restore-keys: |
+      #       "${{ github.event.inputs.flavor }}-build-cache-${{ github.event.inputs.arch }}"
       - name: Run build script
         run: ./scripts/build.sh
         env:

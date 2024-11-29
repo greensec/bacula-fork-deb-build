@@ -19,8 +19,8 @@ git config --global advice.detachedHead false
 cmake --version | head -n 1
 
 # Enable ccache
-export PATH="/usr/lib/ccache:${PATH}"
-export CCACHE_DIR="${WORKDIR}/cache/ccache"
+# export PATH="/usr/lib/ccache:${PATH}"
+# export CCACHE_DIR="${WORKDIR}/cache/ccache"
 
 # Checkout handbreak
 cd "${WORKDIR}"
