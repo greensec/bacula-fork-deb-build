@@ -11,7 +11,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN	set -e \
     && dpkg --add-architecture arm64 \
     && apt-get update \
-    && apt-get install -y --no-install-recommends wget ca-certificates gnupg quilt ccache distcc dpkg-cross gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu libc6-dev-arm64-cross aarch64-linux-gnu-g++ \
+    && apt-get install -y --no-install-recommends wget ca-certificates gnupg quilt ccache distcc dpkg-cross \
+        gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu libc6-dev-arm64-cross g++-aarch64-linux-gnu \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
 
