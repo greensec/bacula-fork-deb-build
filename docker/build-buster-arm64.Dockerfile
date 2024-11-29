@@ -29,5 +29,6 @@ RUN set -e \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y -t buster-backports cmake libarchive13 \
     && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y --host-architecture arm64 bareos \
     && DEBIAN_FRONTEND=noninteractive apt-get build-dep -y python-bareos \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --host-architecture arm64 dh-python python3-distutils python3-lib2to3 python3-setuptools \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/* /var/log/*
