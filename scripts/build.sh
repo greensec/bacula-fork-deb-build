@@ -19,8 +19,8 @@ git config --global advice.detachedHead false
 cmake --version | head -n 1
 
 # Enable ccache
-export PATH="/usr/lib/ccache:${PATH}"
-export CCACHE_DIR="${WORKDIR}/cache/ccache"
+# export PATH="/usr/lib/ccache:${PATH}"
+# export CCACHE_DIR="${WORKDIR}/cache/ccache"
 
 # Checkout handbreak
 cd "${WORKDIR}"
@@ -55,6 +55,6 @@ if [ -d "../patches.$DEB_FLAVOR" ]; then
   cp -va ../patches.$DEB_FLAVOR debian/
 fi
 
-DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b
+CONFIG_SITE="/etc/dpkg-cross/cross-config.$DEB_HOST_ARCH" DEB_BUILD_OPTIONS="noautodbgsym nocheck nodocs" dpkg-buildpackage -j$(nproc) -d -us -b --host-arch=$DEB_HOST_ARCH
 cd ..
 rm -vf *-dbg*.deb
